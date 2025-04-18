@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viktor Medvid – Frontend Developer</title>
+    <meta property="og:title" content="Viktor Medvid – Frontend Developer" />
+    <meta
+      property="og:description"
+      content="Frontend resume of Viktor Medvid with experience in web development"
+    />
+    <meta property="og:image" content="https://example.com/images/me.jpg" />
+    <meta property="og:url" content="https://example.com/resume.html" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" as="image" href="./images/me.jpg" />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+        line-height: 1.6;
+        font-size: 16px;
+        margin: 0 auto;
+        padding: 15px;
+        max-width: 1200px;
+        background: linear-gradient(135deg, #fff9f4, #f0f4f8);
+        color: #2c3e50;
+      }
+      h1,
+      h2,
+      h3 {
+        margin: 0 0 10px;
+        color: #1f2e45;
+        line-height: 1.1;
+      }
+      p,
+      ul {
+        margin: 5px 0;
+      }
+      p:last-child,
+      .mb-0 {
+        margin-bottom: 0;
+      }
+      ul {
+        padding-left: 14px;
+      }
+      a {
+        color: #3498db;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .unstyle {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .hidden {
+        visibility: hidden;
+        position: absolute;
+      }
+      .section {
+        background: linear-gradient(145deg, #fffefb, #fdfdfd);
+        padding: 15px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05),
+          0 2px 6px rgba(0, 0, 0, 0.05);
+        border: 1px solid #ececec;
+        margin-bottom: 15px;
+        opacity: 0;
+      }
+      .section.animate-in {
+        animation: fadeIn3D 0.8s ease forwards;
+      }
+      .flex {
+        display: flex;
+      }
+      .col-2 {
+        justify-content: space-between;
+      }
+
+      @keyframes fadeIn3D {
+        0% {
+          opacity: 0;
+          transform: perspective(800px) rotateX(8deg) rotateY(8deg)
+            translateY(30px);
+        }
+        100% {
+          opacity: 1;
+          transform: none;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .flex {
+          flex-direction: column;
+        }
+        .sticky {
+          display: flex;
+          align-items: flex-start;
+        }
+        img {
+          margin-right: 15px;
+          max-width: 170px;
+          object-fit: cover;
+          min-width: 100px;
+        }
+      }
+
+      @media (max-width: 500px) {
+        .sticky {
+          display: block;
+        }
+        img {
+          margin: 0 auto 15px;
+          max-width: 100%;
+        }
+      }
+
+      @media (min-width: 769px) {
+        img {
+          margin-bottom: 15px;
+        }
+        aside {
+          margin-right: 15px;
+          position: relative;
+          width: 260px;
+          flex-shrink: 0;
+        }
+        .sticky {
+          position: sticky;
+          top: 15px;
+        }
+      }
+
+      @media (max-width: 1100px) {
+        .col-2 {
+          flex-direction: column;
+        }
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Viktor Medvid",
+        "image": "./images/me.jpg",
+        "jobTitle": "Frontend Developer",
+        "telephone": "+380939280755",
+        "email": "darkissdark@gmail.com"
+      }
+    </script>
+  </head>
+  <body class="flex">
+    <aside>
+      <div class="section sticky">
+        <img
+          width="398"
+          height="473"
+          src="./images/me.jpg"
+          alt="Profile picture of Viktor Medvid"
+          fetchpriority="high"
+        />
+        <ul class="unstyle">
+          <li>
+            <strong>Phone:</strong>
+            <a href="tel:+380939280755">+380939280755</a>
+          </li>
+          <li>
+            <strong>Email:</strong>
+            <a href="mailto:darkissdark@gmail.com">darkissdark@gmail.com</a>
+          </li>
+          <li><strong>Name:</strong> Viktor Medvid</li>
+          <li><strong>Position:</strong> Frontend Developer</li>
+          <li><strong>Ukrainian:</strong> Native</li>
+          <li><strong>English:</strong> Pre-intermediate</li>
+        </ul>
+      </div>
+    </aside>
+    <main>
+      <h1 class="hidden">Viktor Medvid – Frontend Developer</h1>
+
+      <section class="section">
+        <h2>Summary of Qualifications</h2>
+        <p>
+          Front-end developer with experience in developing and supporting web
+          applications. Proficient in collaborating with cross-functional teams
+          to deliver high-quality software solutions.
+        </p>
+      </section>
+
+      <section class="section">
+        <div class="flex col-2">
+          <div>
+            <h3>Hard Skills</h3>
+            <ul>
+              <li>HTML/CSS (SASS/SCSS)</li>
+              <li>JavaScript</li>
+              <li>Vue 2</li>
+              <li>Webpack 4</li>
+              <li>Git</li>
+              <li>Figma</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Soft Skills</h3>
+            <ul class="mb-0">
+              <li>Effective team player with strong communication skills</li>
+              <li>Ability to troubleshoot and resolve complex issues</li>
+              <li>
+                Quick to learn and adapt to new technologies and methodologies
+              </li>
+              <li>Efficient in managing tasks and meeting deadlines</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Experience</h2>
+        <p>in progress..</p>
+      </section>
+
+      <section class="section">
+        <h2>Education</h2>
+        <p>
+          <strong>Vinnytsia National Technical University</strong>, Institute of
+          Civil Engineering, Thermal Power Engineering and Gas Supply (2008 -
+          2013)
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Additional Education</h2>
+        <p>
+          <strong>School of Programming «Shpp»</strong>
+          (2024 - 2025)
+          <a
+            href="https://diploma.programming.org.ua/en/d/ojM7n5vrkRO6DpdG1aebVW8Z43Y0yaEL"
+            target="_blank"
+            >Computer Science Basics</a
+          >
+        </p>
+      </section>
+
+      <section class="section" style="margin-bottom: 0">
+        <h2>Hobbies</h2>
+        <p style="margin-bottom: 0">Traveling, Digital gaming</p>
+      </section>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const sections = document.querySelectorAll(".section");
+        sections.forEach((section, index) => {
+          setTimeout(() => {
+            section.classList.add("animate-in");
+          }, index * 350);
+        });
+      });
+    </script>
+  </body>
+</html>
