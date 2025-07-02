@@ -1,18 +1,75 @@
-# Viktor Medvid – Frontend Developer Resume
+# Nuxt Minimal Starter
 
-A single-page resume built with HTML and CSS, featuring smooth animations and responsive design. Optimized for fast loading, SEO, accessibility, and performance best practices.
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## 🧩 Technologies Used
+## Setup
 
-- HTML5
-- CSS3 (including Flexbox and Media Queries)
-- Google Fonts
-- SEO markup (`application/ld+json`)
-- Animations (`@keyframes fadeIn3D`)
-- Lighthouse-compliant optimizations
+Make sure to install dependencies:
 
-## 🚀 Preview
+```bash
+# npm
+npm install
 
-You can preview the resume locally or online:
+# pnpm
+pnpm install
 
-🔗 **Live Demo:** [https://darkissdark.github.io/](https://darkissdark.github.io/)
+# yarn
+yarn install
+
+# bun
+bun install
+```
+
+## Development Server
+
+Start the development server on `http://localhost:3000`:
+
+```bash
+# npm
+npm run dev
+
+# pnpm
+pnpm dev
+
+# yarn
+yarn dev
+
+# bun
+bun run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+# npm
+npm run build
+
+# pnpm
+pnpm build
+
+# yarn
+yarn build
+
+# bun
+bun run build
+```
+
+Locally preview production build:
+
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
