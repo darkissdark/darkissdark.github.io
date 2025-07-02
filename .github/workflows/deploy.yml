@@ -23,16 +23,10 @@ jobs:
       - name: Generate static site
         run: yarn generate
 
-      - name: Copy generated site to root
-        run: |
-          find . -mindepth 1 -maxdepth 1 ! -name '.output' ! -name '.git' ! -name '.github' -exec rm -rf {} +
-          cp -r .output/public/* .
-          rm -rf .output
-
-      - name: Commit and push changes
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "Deploy static site [skip ci]" || echo "No changes to commit"
-          git push
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .output/public
+          publish_branch: gh-pages
+          force_orphan: true
