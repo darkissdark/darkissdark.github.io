@@ -1,0 +1,38 @@
+name: Deploy Nuxt to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Generate static site
+        run: yarn generate
+
+      - name: Copy generated site to root
+        run: |
+          find . -mindepth 1 -maxdepth 1 ! -name '.output' ! -name '.git' ! -name '.github' -exec rm -rf {} +
+          cp -r .output/public/* .
+          rm -rf .output
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Deploy static site [skip ci]" || echo "No changes to commit"
+          git push
