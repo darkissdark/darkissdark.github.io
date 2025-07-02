@@ -6,5 +6,22 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss"],
   app: {
     baseURL: "/",
+    head: {
+      title: 'Viktor Medvid – Frontend Developer',
+      htmlAttrs: {
+        lang: 'en'
+      },
+      meta: [
+        { name: 'description', content: 'Frontend resume of Viktor Medvid with experience in web development' },
+        { property: 'og:title', content: 'Viktor Medvid – Frontend Developer' },
+        { property: 'og:description', content: 'Frontend resume of Viktor Medvid with experience in web development' },
+        { property: 'og:image', content: 'https://darkissdark.github.io/images/me.jpg' },
+        { property: 'og:url', content: 'https://darkissdark.github.io/' },
+        { property: 'og:type', content: 'website' }
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      ]
+    }
   },
 });
