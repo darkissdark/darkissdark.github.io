@@ -1,11 +1,13 @@
 <template>
-  <div class="flex flex-col md:flex-row gap-4 max-w-5xl mx-auto p-4">
-    <ProfileSidebar class="w-full md:w-1/3" />
-    <MainResume class="w-full md:w-2/3" />
-  </div>
+    <main
+        class="min-h-screen relative mx-auto px-4 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] text-black"
+    >
+        <Hero />
+        <Contacts />
+    </main>
 </template>
 
 <script setup lang="ts">
-import ProfileSidebar from '../components/ProfileSidebar.vue';
-import MainResume from '../components/MainResume.vue';
-</script> 
+import Hero from '../components/hero/Hero.vue';
+import Contacts from '../components/Contacts.vue';
+</script>
