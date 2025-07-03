@@ -1,6 +1,6 @@
 <template>
     <main
-        class="min-h-screen relative mx-auto px-4 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] text-black"
+        class="min-h-screen relative mx-auto px-4 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] text-black pb-20 lg:pb-0"
     >
         <Hero />
         <Contacts />

@@ -23,7 +23,15 @@
                 <span class="text-gray-700">&#123;</span>
             </div>
 
-            <div v-for="(value, key) in developer" :key="key" class="pl-4 sm:pl-8">
+            <div
+                v-for="(value, key) in developer"
+                :key="key"
+                :class="{
+                    'flex flex-wrap':
+                        Array.isArray(value) && value.every((item) => typeof item !== 'object'),
+                }"
+                class="pl-4 sm:pl-8"
+            >
                 <span :class="keysStyle">{{ key }}: </span>
 
                 <!-- Arrays of Objects -->
@@ -50,14 +58,16 @@
                 </template>
 
                 <!-- Simple Arrays -->
-                <template v-else-if="Array.isArray(value)">
-                    <span class="text-pink-600">[</span>
+                <span class="ml-4" v-else-if="Array.isArray(value)">
                     <template v-for="(v, index) in value" :key="index">
+                        <span v-if="index === 0" class="text-pink-600">[</span>
                         <span :class="valueStyle.array">'{{ v }}'</span>
                         <span v-if="index < value.length - 1" class="text-gray-400">, </span>
+                        <span v-if="index === value.length - 1" class="text-pink-600"
+                            >]<span class="text-gray-400">, </span></span
+                        >
                     </template>
-                    <span class="text-pink-600">]</span>
-                </template>
+                </span>
 
                 <!-- Primitives -->
                 <template v-else>
@@ -66,7 +76,10 @@
                     </span>
                 </template>
 
-                <span class="text-gray-400">,</span>
+                <template
+                    v-if="Array.isArray(value) && value.every((item) => typeof item !== 'object')"
+                ></template>
+                <span v-else class="text-gray-400">,</span>
             </div>
 
             <div><span class="text-gray-700">&#125;;</span></div>
