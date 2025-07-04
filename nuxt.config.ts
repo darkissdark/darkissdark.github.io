@@ -25,7 +25,7 @@ export default defineNuxtConfig({
                 { property: 'og:url', content: 'https://darkissdark.github.io/' },
                 { property: 'og:type', content: 'website' },
             ],
-            link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+            link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
         },
     },
 });

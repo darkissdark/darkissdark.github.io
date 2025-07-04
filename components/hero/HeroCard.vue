@@ -88,10 +88,12 @@
 </template>
 
 <script setup lang="ts">
+import lastUpdate from '../../lastUpdate.js';
+
 const developer = {
     company: null,
     hireable: true,
-    lastUpdate: '03-07-2025',
+    lastUpdate,
     languages: [
         { language: 'English', level: 'A2' },
         { language: 'Ukrainian', level: 'Fluent' },
