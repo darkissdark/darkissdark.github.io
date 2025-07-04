@@ -1,6 +1,6 @@
 <template>
     <div
-        class="h-full flex flex-col max-w-lg mx-auto rounded-xl shadow-lg border border-gray-200 bg-white overflow-hidden"
+        class="h-full flex flex-col max-w-lg mx-auto rounded-xl shadow-lg border border-gray-200 bg-white"
     >
         <!-- Browser tab imitation -->
         <div class="flex items-center px-4 py-2 bg-gray-100 border-b border-gray-200">
@@ -15,7 +15,7 @@
         </div>
 
         <!-- Code block -->
-        <div class="flex-1 bg-gray-50 p-4 sm:p-6 font-mono text-sm text-left">
+        <div class="flex-1 bg-gray-50 p-4 sm:p-6 font-mono text-sm text-left rounded-b-xl">
             <div>
                 <span class="text-blue-600">const</span>
                 <span class="text-blue-800"> employee </span>

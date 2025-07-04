@@ -13,8 +13,8 @@
                     :src="project.image"
                     :alt="`Preview image for ${project.title}`"
                     class="rounded-xl w-full object-cover mb-2 max-h-40"
-                    width="600"
-                    height="240"
+                    width="446"
+                    height="250"
                     format="webp"
                     loading="lazy"
                     sizes="xs:200px md:300px lg:600px"
@@ -83,7 +83,7 @@ const projects: Project[] = [
         tags: ['Nuxt3', 'Vue', 'TailwindCSS', 'TypeScript'],
         visit: 'https://darkissdark.github.io',
         source: 'https://github.com/darkissdark/darkissdark.github.io',
-        image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80',
+        image: '/images/projects/trello-like.webp',
     },
     {
         title: 'Trello-like Application',
