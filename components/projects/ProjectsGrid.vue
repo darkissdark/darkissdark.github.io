@@ -17,7 +17,7 @@
                     height="250"
                     format="webp"
                     loading="lazy"
-                    sizes="xs:200px md:300px lg:600px"
+                    sizes="xs:200px lg:446px"
                 />
 
                 <h3 class="font-bold text-1xl md:text-2xl text-gray-900">
@@ -38,20 +38,22 @@
 
                 <div class="flex gap-3 mt-auto">
                     <a
-                        :href="project.visit"
+                        :href="project.disabled ? '#' : project.visit"
+                        v-if="!project.disabled"
                         target="_blank"
                         rel="noopener noreferrer"
                         :aria-label="`Visit ${project.title}`"
-                        class="flex items-center justify-center bg-[#488aec] text-white font-bold text-base cursor-pointer text-center uppercase align-middle user-select-none shadow-lg border-none px-3 py-1 rounded-lg gap-2 transition duration-300 hover:bg-[#306cc6]"
+                        class="flex items-center justify-center bg-[#2563eb] text-white text-18 font-bold text-base cursor-pointer text-center uppercase align-middle user-select-none shadow-lg border-none px-3 p-1 rounded-lg gap-2 transition duration-300 hover:bg-[#1d4ed8]"
                     >
-                        <VisitIcon width="24" height="24" /> VISIT
+                        <VisitIcon width="24" height="24" />
+                        VISIT
                     </a>
                     <a
                         :href="project.source"
                         target="_blank"
                         rel="noopener noreferrer"
                         :aria-label="`Source code for ${project.title}`"
-                        class="flex items-center justify-center bg-[#488aec] text-white font-bold text-base cursor-pointer text-center uppercase align-middle user-select-none shadow-lg border-none px-3 p-1 rounded-lg gap-2 transition duration-300 hover:bg-[#306cc6]"
+                        class="flex items-center justify-center bg-[#2563eb] text-white text-18 font-bold text-base cursor-pointer text-center uppercase align-middle user-select-none shadow-lg border-none px-3 p-1 rounded-lg gap-2 transition duration-300 hover:bg-[#1d4ed8]"
                     >
                         <GithubIcon width="24" height="24" /> SOURCE
                     </a>
@@ -73,6 +75,7 @@ interface Project {
     visit: string;
     source: string;
     image: string;
+    disabled?: boolean;
 }
 
 const projects: Project[] = [
@@ -83,7 +86,8 @@ const projects: Project[] = [
         tags: ['Nuxt3', 'Vue', 'TailwindCSS', 'TypeScript'],
         visit: 'https://darkissdark.github.io',
         source: 'https://github.com/darkissdark/darkissdark.github.io',
-        image: '/images/projects/trello-like.webp',
+        image: '/images/projects/portfolio.webp',
+        disabled: true,
     },
     {
         title: 'Trello-like Application',

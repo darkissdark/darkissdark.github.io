@@ -107,10 +107,10 @@ const developer = {
 const trafficLights = ['bg-red-400', 'bg-yellow-400', 'bg-green-400'];
 const keysStyle = 'text-blue-900';
 const valueStyle = {
-    null: 'text-yellow-600',
+    null: 'text-amber-700',
     boolean: 'text-purple-600',
-    string: 'text-green-600',
-    array: 'text-green-600',
+    string: 'text-green-700',
+    array: 'text-green-700',
     number: 'text-orange-600',
 };
 
