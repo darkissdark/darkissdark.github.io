@@ -4,10 +4,12 @@
     >
         <Hero />
         <Contacts />
+        <ProjectsGrid />
     </main>
 </template>
 
 <script setup lang="ts">
 import Hero from '../components/hero/Hero.vue';
 import Contacts from '../components/contacts/Contacts.vue';
+import ProjectsGrid from '~/components/projects/ProjectsGrid.vue';
 </script>

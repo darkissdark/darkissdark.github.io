@@ -41,15 +41,15 @@ const contacts: Contact[] = [
         target: '_blank',
         icon: markRaw(GithubIcon),
     },
-    {
-        label: 'LinkedIn',
-        href: 'https://linkedin.com/in/your-link',
-        target: '_blank',
-        icon: markRaw(LinkedinIcon),
-    },
+    // {
+    //     label: 'LinkedIn',
+    //     href: 'https://linkedin.com/in/your-link',
+    //     target: '_blank',
+    //     icon: markRaw(LinkedinIcon),
+    // },
     {
         label: 'Telegram',
-        href: 'https://t.me/your-telegram',
+        href: 'https://t.me/darkiss',
         target: '_blank',
         icon: markRaw(TelegramIcon),
     },

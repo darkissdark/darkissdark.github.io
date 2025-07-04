@@ -12,7 +12,7 @@
             </clipPath>
         </defs>
         <image
-            xlink:href="/images/me.jpg"
+            xlink:href="/public/images/me.jpg"
             width="160"
             height="185"
             x="20"
