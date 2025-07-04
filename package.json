@@ -8,7 +8,7 @@
         "generate": "nuxt generate",
         "preview": "nuxt preview",
         "postinstall": "nuxt prepare",
-        "update-last-update": "node scripts/updateLastUpdate.js"
+        "update-last-update": "node scripts/updateLastUpdate.cjs"
     },
     "dependencies": {
         "nuxt": "^3.17.6",

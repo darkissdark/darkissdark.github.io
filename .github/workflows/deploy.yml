@@ -21,7 +21,7 @@ jobs:
               run: yarn install --frozen-lockfile
 
             - name: Update lastUpdate.js
-              run: node scripts/updateLastUpdate.js
+              run: node scripts/updateLastUpdate.cjs
 
             - name: Generate static site
               run: yarn generate
