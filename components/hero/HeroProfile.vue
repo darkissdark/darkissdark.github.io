@@ -14,6 +14,10 @@
                 <HandWave class="w-7 h-7 align-middle" />
             </span>
         </div>
+        <AnimatedText tag="h1">
+            <template #text-stroke> FRONTEND </template>
+            <template #text-shine> DEVELOPER </template>
+        </AnimatedText>
         <div class="w-full justify-center flex items-center gap-3 mt-6 z-10">
             <a
                 href="#"
@@ -32,6 +36,7 @@ import BlobBg from '../icons/BlobBg.vue';
 import BlobMask from '../icons/BlobMask.vue';
 import HandWave from '../icons/HandWave.vue';
 import ResumeIcon from '../icons/ResumeIcon.vue';
+import AnimatedText from '../common/AnimatedText.vue';
 </script>
 
 <style scoped>

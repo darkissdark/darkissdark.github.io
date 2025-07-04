@@ -9,5 +9,5 @@
 
 <script setup lang="ts">
 import Hero from '../components/hero/Hero.vue';
-import Contacts from '../components/Contacts.vue';
+import Contacts from '../components/contacts/Contacts.vue';
 </script>

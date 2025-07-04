@@ -18,8 +18,8 @@
         <div class="flex-1 bg-gray-50 p-4 sm:p-6 font-mono text-sm text-left">
             <div>
                 <span class="text-blue-600">const</span>
-                <span class="text-blue-800"> fullStackDeveloper </span>
-                <span class="text-blue-600">=</span>
+                <span class="text-blue-800"> employee </span>
+                <span class="text-blue-600">= </span>
                 <span class="text-gray-700">&#123;</span>
             </div>
 

@@ -7,7 +7,7 @@
     </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import HeroProfile from './HeroProfile.vue';
 import HeroCard from './HeroCard.vue';
 </script>
