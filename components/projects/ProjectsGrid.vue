@@ -17,6 +17,7 @@
                     height="240"
                     format="webp"
                     loading="lazy"
+                    sizes="xs:200px md:300px lg:600px"
                 />
 
                 <h3 class="font-bold text-1xl md:text-2xl text-gray-900">
@@ -91,7 +92,7 @@ const projects: Project[] = [
         tags: ['React', 'Redux', 'TypeScript', 'SCSS'],
         visit: 'https://darkissdark.github.io/my-trello/',
         source: 'https://github.com/darkissdark/my-trello/',
-        image: '/images/projects/trello-like.png',
+        image: '/images/projects/trello-like.webp',
     },
     {
         title: 'DiGi - Digital Agency',
@@ -100,7 +101,7 @@ const projects: Project[] = [
         tags: ['HTML', 'CSS', 'JavaScript'],
         visit: 'https://darkissdark.github.io/di-gi/',
         source: 'https://github.com/darkissdark/di-gi',
-        image: '/images/projects/di-gi.png',
+        image: '/images/projects/di-gi.webp',
     },
 ];
 </script>

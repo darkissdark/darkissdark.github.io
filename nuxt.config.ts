@@ -3,7 +3,7 @@ export default defineNuxtConfig({
     ssr: false,
     compatibilityDate: '2025-05-15',
     devtools: { enabled: true },
-    modules: ['@nuxtjs/tailwindcss', '@nuxt/image', '@nuxt/image-edge'],
+    modules: ['@nuxtjs/tailwindcss', '@nuxt/image-edge'],
     image: {
         format: ['webp', 'avif'],
         screens: {
