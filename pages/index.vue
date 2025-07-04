@@ -13,3 +13,8 @@ import Hero from '../components/hero/Hero.vue';
 import Contacts from '../components/contacts/Contacts.vue';
 import ProjectsGrid from '~/components/projects/ProjectsGrid.vue';
 </script>
+
+<style lang="sass">
+.size18
+  font-size: 18px
+</style>

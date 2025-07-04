@@ -8,7 +8,7 @@
                 :key="project.title"
                 class="bg-white rounded-3xl shadow-lg border border-gray-200 p-6 flex flex-col gap-4 hover:shadow-2xl transition-shadow duration-300"
             >
-                <NuxtImg
+                <NuxtPicture
                     v-if="project.image"
                     :src="project.image"
                     :alt="`Preview image for ${project.title}`"
@@ -43,7 +43,7 @@
                         target="_blank"
                         rel="noopener noreferrer"
                         :aria-label="`Visit ${project.title}`"
-                        class="flex items-center justify-center bg-[#2563eb] text-white text-18 font-bold text-base cursor-pointer text-center uppercase align-middle user-select-none shadow-lg border-none px-3 p-1 rounded-lg gap-2 transition duration-300 hover:bg-[#1d4ed8]"
+                        class="flex items-center justify-center bg-[#488aec] text-white font-bold text-base cursor-pointer text-center uppercase align-middle user-select-none shadow-lg border-none px-3 p-1 rounded-lg gap-2 transition duration-300 hover:bg-[#1d4ed8] size18"
                     >
                         <VisitIcon width="24" height="24" />
                         VISIT
@@ -53,7 +53,7 @@
                         target="_blank"
                         rel="noopener noreferrer"
                         :aria-label="`Source code for ${project.title}`"
-                        class="flex items-center justify-center bg-[#2563eb] text-white text-18 font-bold text-base cursor-pointer text-center uppercase align-middle user-select-none shadow-lg border-none px-3 p-1 rounded-lg gap-2 transition duration-300 hover:bg-[#1d4ed8]"
+                        class="flex items-center justify-center bg-[#488aec] text-white font-bold text-base cursor-pointer text-center uppercase align-middle user-select-none shadow-lg border-none px-3 p-1 rounded-lg gap-2 transition duration-300 hover:bg-[#1d4ed8] size18"
                     >
                         <GithubIcon width="24" height="24" /> SOURCE
                     </a>
