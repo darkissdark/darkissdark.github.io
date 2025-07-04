@@ -8,11 +8,14 @@
                 :key="project.title"
                 class="bg-white rounded-3xl shadow-lg border border-gray-200 p-6 flex flex-col gap-4 hover:shadow-2xl transition-shadow duration-300"
             >
-                <img
+                <NuxtImg
                     v-if="project.image"
                     :src="project.image"
                     :alt="`Preview image for ${project.title}`"
                     class="rounded-xl w-full object-cover mb-2 max-h-40"
+                    width="600"
+                    height="240"
+                    format="webp"
                     loading="lazy"
                 />
 
@@ -60,6 +63,7 @@
 <script setup lang="ts">
 import GithubIcon from '../../icons/GithubIcon.vue';
 import VisitIcon from '../../icons/VisitIcon.vue';
+import { NuxtImg } from '#components';
 
 interface Project {
     title: string;
@@ -85,9 +89,9 @@ const projects: Project[] = [
         description:
             'Features include creating and managing boards, adding and organizing tasks, responsive design, user authentication, custom board backgrounds, and drag & drop functionality for cards and lists.',
         tags: ['React', 'Redux', 'TypeScript', 'SCSS'],
-        visit: 'https://github.com/darkissdark/my-trello/',
+        visit: 'https://darkissdark.github.io/my-trello/',
         source: 'https://github.com/darkissdark/my-trello/',
-        image: '/images/projects/trello-like.webp',
+        image: '/images/projects/trello-like.png',
     },
     {
         title: 'DiGi - Digital Agency',
@@ -96,7 +100,7 @@ const projects: Project[] = [
         tags: ['HTML', 'CSS', 'JavaScript'],
         visit: 'https://darkissdark.github.io/di-gi/',
         source: 'https://github.com/darkissdark/di-gi',
-        image: '/images/projects/di-gi.webp',
+        image: '/images/projects/di-gi.png',
     },
 ];
 </script>
