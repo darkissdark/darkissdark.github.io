@@ -17,4 +17,6 @@ import ProjectsGrid from '~/components/projects/ProjectsGrid.vue';
 <style lang="sass">
 .size18
   font-size: 18px
+.text-shadow
+  text-shadow: 0 1px 2px rgba(0,0,0,0.25), 0 1px 8px rgba(0,0,0,0.15)
 </style>

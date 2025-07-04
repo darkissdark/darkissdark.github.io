@@ -41,12 +41,12 @@ const contacts: Contact[] = [
         target: '_blank',
         icon: markRaw(GithubIcon),
     },
-    // {
-    //     label: 'LinkedIn',
-    //     href: 'https://linkedin.com/in/your-link',
-    //     target: '_blank',
-    //     icon: markRaw(LinkedinIcon),
-    // },
+    {
+        label: 'LinkedIn',
+        href: 'https://www.linkedin.com/in/viktor-medvid-910160357/',
+        target: '_blank',
+        icon: markRaw(LinkedinIcon),
+    },
     {
         label: 'Telegram',
         href: 'https://t.me/darkiss',

@@ -11,7 +11,7 @@
                     :class="['w-3 h-3 rounded-full', color]"
                 ></span>
             </div>
-            <span class="ml-4 text-gray-400 text-xs select-none">Employees.vue</span>
+            <span class="ml-4 text-gray-700 text-xs select-none">Employees.vue</span>
         </div>
 
         <!-- Code block -->

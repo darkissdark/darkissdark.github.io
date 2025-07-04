@@ -3,17 +3,7 @@ export default defineNuxtConfig({
     ssr: false,
     compatibilityDate: '2025-05-15',
     devtools: { enabled: true },
-    modules: ['@nuxtjs/tailwindcss', '@nuxt/image-edge'],
-    // image: {
-    //     format: ['webp', 'avif'],
-    //     screens: {
-    //         xs: 320,
-    //         sm: 600,
-    //         md: 900,
-    //         lg: 1200,
-    //         xl: 1600,
-    //     },
-    // },
+    modules: ['@nuxtjs/tailwindcss'],
     app: {
         baseURL: '/',
         head: {

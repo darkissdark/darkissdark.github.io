@@ -8,16 +8,12 @@
                 :key="project.title"
                 class="bg-white rounded-3xl shadow-lg border border-gray-200 p-6 flex flex-col gap-4 hover:shadow-2xl transition-shadow duration-300"
             >
-                <NuxtPicture
+                <img
                     v-if="project.image"
                     :src="project.image"
                     :alt="`Preview image for ${project.title}`"
                     class="rounded-xl w-full object-cover mb-2 max-h-40"
-                    width="446"
-                    height="250"
-                    format="webp"
                     loading="lazy"
-                    sizes="xs:200px lg:446px"
                 />
 
                 <h3 class="font-bold text-1xl md:text-2xl text-gray-900">
@@ -43,17 +39,16 @@
                         target="_blank"
                         rel="noopener noreferrer"
                         :aria-label="`Visit ${project.title}`"
-                        class="flex items-center justify-center bg-[#488aec] text-white font-bold text-base cursor-pointer text-center uppercase align-middle user-select-none shadow-lg border-none px-3 p-1 rounded-lg gap-2 transition duration-300 hover:bg-[#1d4ed8] size18"
+                        class="flex items-center justify-center bg-[#488aec] text-white text-shadow text-18 font-bold text-base cursor-pointer text-center uppercase align-middle user-select-none shadow-lg border-none px-3 p-1 rounded-lg gap-2 transition duration-300 hover:bg-[#1d4ed8] size18"
                     >
-                        <VisitIcon width="24" height="24" />
-                        VISIT
+                        <VisitIcon width="24" height="24" /> VISIT
                     </a>
                     <a
                         :href="project.source"
                         target="_blank"
                         rel="noopener noreferrer"
                         :aria-label="`Source code for ${project.title}`"
-                        class="flex items-center justify-center bg-[#488aec] text-white font-bold text-base cursor-pointer text-center uppercase align-middle user-select-none shadow-lg border-none px-3 p-1 rounded-lg gap-2 transition duration-300 hover:bg-[#1d4ed8] size18"
+                        class="flex items-center justify-center bg-[#488aec] text-white text-shadow text-18 font-bold text-base cursor-pointer text-center uppercase align-middle user-select-none shadow-lg border-none px-3 p-1 rounded-lg gap-2 transition duration-300 hover:bg-[#1d4ed8] size18"
                     >
                         <GithubIcon width="24" height="24" /> SOURCE
                     </a>
@@ -66,7 +61,6 @@
 <script setup lang="ts">
 import GithubIcon from '../../icons/GithubIcon.vue';
 import VisitIcon from '../../icons/VisitIcon.vue';
-import { NuxtImg } from '#components';
 
 interface Project {
     title: string;
