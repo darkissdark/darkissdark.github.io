@@ -21,7 +21,7 @@ export default defineNuxtConfig({
                     property: 'og:description',
                     content: 'Frontend resume of Viktor Medvid with experience in web development',
                 },
-                { property: 'og:image', content: '/share.webp' },
+                { property: 'og:image', content: 'https://darkissdark.github.io/share.webp' },
                 { property: 'og:url', content: 'https://darkissdark.github.io/' },
                 { property: 'og:type', content: 'website' },
             ],
