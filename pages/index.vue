@@ -4,6 +4,7 @@
     >
         <Hero />
         <Contacts />
+        <EducationSection />
         <ProjectsGrid />
     </main>
 </template>
@@ -11,7 +12,8 @@
 <script setup lang="ts">
 import Hero from '../components/hero/Hero.vue';
 import Contacts from '../components/contacts/Contacts.vue';
-import ProjectsGrid from '~/components/projects/ProjectsGrid.vue';
+import ProjectsGrid from '../components/projects/ProjectsGrid.vue';
+import EducationSection from '../components/education/EducationSection.vue';
 </script>
 
 <style lang="sass">

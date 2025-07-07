@@ -1,7 +1,5 @@
 <template>
-    <div
-        class="h-full flex flex-col max-w-lg mx-auto rounded-xl shadow-lg border border-gray-200 bg-white"
-    >
+    <div class="h-full flex flex-col rounded-xl shadow-lg border border-gray-200 bg-white">
         <!-- Browser tab imitation -->
         <div class="flex items-center px-4 py-2 bg-gray-100 border-b border-gray-200">
             <div class="flex space-x-2">

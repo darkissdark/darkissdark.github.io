@@ -1,6 +1,6 @@
 <template>
     <section class="py-4">
-        <h2 class="text-3xl font-extrabold text-center mb-8 text-gray-800">Projects</h2>
+        <h2 class="text-3xl font-extrabold mb-8 text-gray-800">Projects</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <article
@@ -39,7 +39,7 @@
                         target="_blank"
                         rel="noopener noreferrer"
                         :aria-label="`Visit ${project.title}`"
-                        class="flex items-center justify-center bg-[#488aec] text-white text-shadow text-18 font-bold text-base cursor-pointer text-center uppercase align-middle user-select-none shadow-lg border-none px-3 p-1 rounded-lg gap-2 transition duration-300 hover:bg-[#1d4ed8] size18"
+                        class="flex items-center justify-center bg-[#488aec] text-white text-shadow text-18 font-bold text-base cursor-pointer text-center uppercase align-middle user-select-none shadow-lg border-none px-3 p-1 rounded-lg gap-2 transition duration-300 hover:bg-[#306cc6] size18"
                     >
                         <VisitIcon width="24" height="24" /> VISIT
                     </a>
@@ -48,7 +48,7 @@
                         target="_blank"
                         rel="noopener noreferrer"
                         :aria-label="`Source code for ${project.title}`"
-                        class="flex items-center justify-center bg-[#488aec] text-white text-shadow text-18 font-bold text-base cursor-pointer text-center uppercase align-middle user-select-none shadow-lg border-none px-3 p-1 rounded-lg gap-2 transition duration-300 hover:bg-[#1d4ed8] size18"
+                        class="flex items-center justify-center bg-[#488aec] text-white text-shadow text-18 font-bold text-base cursor-pointer text-center uppercase align-middle user-select-none shadow-lg border-none px-3 p-1 rounded-lg gap-2 transition duration-300 hover:bg-[#306cc6] size18"
                     >
                         <GithubIcon width="24" height="24" /> SOURCE
                     </a>

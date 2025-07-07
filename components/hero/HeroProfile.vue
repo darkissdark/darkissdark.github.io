@@ -1,6 +1,6 @@
 <template>
     <div
-        class="h-full flex flex-col items-center justify-center rounded-xl p-4 sm:p-6 bg-white shadow-md h-full"
+        class="flex flex-col items-center justify-center rounded-xl p-4 sm:p-6 bg-white shadow-md h-full"
     >
         <div class="relative w-40 h-40 md:w-48 md:h-48 flex items-center justify-center">
             <BlobBg

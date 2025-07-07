@@ -1,9 +1,7 @@
 <template>
-    <section class="relative flex flex-col items-center justify-between py-4 lg:py-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <HeroProfile />
-            <HeroCard />
-        </div>
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center pb-8 lg:py-12">
+        <HeroProfile />
+        <HeroCard />
     </section>
 </template>
 
