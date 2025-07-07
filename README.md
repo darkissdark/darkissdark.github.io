@@ -1,75 +1,82 @@
-# Nuxt Minimal Starter
+# Viktor Medvid – Frontend Developer Portfolio
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A modern, responsive portfolio built with **Nuxt 3**, **Vue 3**, and **Tailwind CSS**. Features animated hero section, project grid, education cards, and accessibility best practices. Deployed on GitHub Pages.
 
-## Setup
+---
 
-Make sure to install dependencies:
+## 🚀 Quick Start
 
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
+# Install dependencies
 yarn install
 
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
+# Start development server
 yarn dev
 
-# bun
-bun run dev
+# Generate static site (for GitHub Pages)
+yarn generate
 ```
 
-## Production
+---
 
-Build the application for production:
+## 📁 Project Structure
 
-```bash
-# npm
-npm run build
+-   `components/hero/` – Hero section, animated intro, code card
+-   `components/projects/` – Projects grid (with tags, links, images)
+-   `components/education/` – Education & certifications (card style)
+-   `components/contacts/` – Social/contact icons (fixed bottom)
+-   `components/common/AnimatedText.vue` – Animated gradient text with stars
+-   `icons/` – SVG icons (social, resume, education, etc.)
+-   `public/images/projects/` – Optimized webp/png images for projects
+-   `pages/index.vue` – Main page layout
+-   `scripts/updateLastUpdate.cjs` – Auto-update last commit date
+-   `.github/workflows/deploy.yml` – GitHub Pages deploy workflow
 
-# pnpm
-pnpm build
+---
 
-# yarn
-yarn build
+## 🧩 Main Components
 
-# bun
-bun run build
-```
+-   **HeroProfile.vue** – Animated intro, avatar, "Get Resume" button
+-   **HeroCard.vue** – Code-style info card (with auto-updated last commit date)
+-   **ProjectsGrid.vue** – Responsive project cards with tags, links, and images
+-   **EducationSection.vue** – Modern education/certification cards with icon
+-   **Contacts.vue** – Social/contact icons (GitHub, Telegram, Email, LinkedIn)
+-   **AnimatedText.vue** – Gradient text, animated shine, floating stars
 
-Locally preview production build:
+---
 
-```bash
-# npm
-npm run preview
+## 🕒 Auto-updated Last Commit Date
 
-# pnpm
-pnpm preview
+-   The file `lastUpdate.js` is automatically updated before every commit and deploy (see `scripts/updateLastUpdate.cjs` and Husky pre-commit hook).
+-   You can use this date in any component (e.g. HeroCard.vue) to show the last update.
 
-# yarn
-yarn preview
+---
 
-# bun
-bun run preview
-```
+## 🌐 Deployment (GitHub Pages)
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+-   Static site is generated with `yarn generate` and deployed via GitHub Actions (`.github/workflows/deploy.yml`).
+-   All images must be optimized and placed in `public/images/projects/` (webp/png/jpg).
+-   **Nuxt Image/IPX is NOT used** for production – use `<img>` with ready images for full compatibility.
+
+---
+
+## 🎨 Styling & Formatting
+
+-   **Tailwind CSS** for all layout and utility classes
+-   **Prettier** config in `.prettierrc` (4 spaces, single quotes, trailing commas)
+-   Custom utility classes (e.g. `.text-shadow`, `.size18`) in SASS or global CSS
+
+---
+
+## 🤝 Accessibility & Best Practices
+
+-   High-contrast buttons and text
+-   Responsive/adaptive layout
+-   Semantic HTML and ARIA labels
+-   Keyboard and screen reader friendly
+
+---
+
+## 📝 License
+
+MIT. Feel free to use, fork, and adapt!
