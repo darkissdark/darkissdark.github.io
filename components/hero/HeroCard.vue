@@ -87,7 +87,7 @@
 
 <script setup lang="ts">
 import lastUpdate from '../../lastUpdate';
-import { profile } from '../../data/profile';
+import profile from '../../data/profile.json';
 
 const { name, location, skills, tools, languages } = profile;
 

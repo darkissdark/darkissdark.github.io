@@ -37,7 +37,7 @@
 
 <script setup lang="ts">
 import EducationIcon from '../../icons/EducationIcon.vue';
-import { profile } from '../../data/profile';
+import profile from '../../data/profile.json';
 
 const educationData = profile.education;
 </script>

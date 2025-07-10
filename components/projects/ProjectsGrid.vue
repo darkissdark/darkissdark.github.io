@@ -61,7 +61,7 @@
 <script setup lang="ts">
 import GithubIcon from '../../icons/GithubIcon.vue';
 import VisitIcon from '../../icons/VisitIcon.vue';
-import { profile } from '../../data/profile';
+import profile from '../../data/profile.json';
 
 const projects = profile.projects;
 </script>

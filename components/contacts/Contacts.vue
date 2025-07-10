@@ -21,7 +21,7 @@
 </template>
 
 <script lang="ts" setup>
-import { profile } from '../../data/profile';
+import profile from '../../data/profile.json';
 import { markRaw } from 'vue';
 import GithubIcon from '../../icons/GithubIcon.vue';
 import LinkedinIcon from '../../icons/LinkedinIcon.vue';
