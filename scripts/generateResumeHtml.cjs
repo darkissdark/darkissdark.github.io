@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { profile } = require('../data/profile');
+const { profile } = require('../data/profile.js');
 
 const html = `<!DOCTYPE html>
 <html lang="en">
