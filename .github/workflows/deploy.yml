@@ -20,6 +20,9 @@ jobs:
             - name: Install dependencies
               run: yarn install --frozen-lockfile
 
+            - name: Install http-server
+              run: yarn add http-server --dev
+
             - name: Update lastUpdate.js
               run: node scripts/updateLastUpdate.cjs
 
@@ -32,8 +35,8 @@ jobs:
             - name: Generate PDF resume
               run: node scripts/generateResumePdf.cjs
 
-            - name: Copy resume.pdf to output
-              run: cp public/resume.pdf .output/public/resume.pdf
+            - name: Copy viktor_medvid_cv.pdf to output
+              run: cp public/viktor_medvid_cv.pdf .output/public/viktor_medvid_cv.pdf
 
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v4
