@@ -3,7 +3,10 @@ const path = require('path');
 const fs = require('fs');
 
 (async () => {
-    const browser = await puppeteer.launch({ headless: 'new' });
+    const browser = await puppeteer.launch({
+        headless: 'new',
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    });
     const page = await browser.newPage();
     const resumeHtmlPath = path.resolve(__dirname, '../public/resume.html');
     const resumePdfPath = path.resolve(__dirname, '../public/resume.pdf');
