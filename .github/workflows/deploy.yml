@@ -32,6 +32,9 @@ jobs:
             - name: Generate PDF resume
               run: node scripts/generateResumePdf.cjs
 
+            - name: Copy resume.pdf to output
+              run: cp public/resume.pdf .output/public/resume.pdf
+
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v4
               with:
