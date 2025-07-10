@@ -29,12 +29,6 @@ jobs:
             - name: Generate static site
               run: yarn generate
 
-            - name: Install Tailwind CSS CLI
-              run: yarn add tailwindcss --dev
-
-            - name: Generate Tailwind CSS for resume
-              run: npx tailwindcss -i ./resume-input.css -o ./public/tailwind-resume.css --minify
-
             - name: Generate resume HTML
               run: node scripts/generateResumeHtml.cjs
 
