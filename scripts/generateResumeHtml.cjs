@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const profile = require('../data/profile.json');
-import lastUpdate from '../lastUpdate';
 
 const css = `
 body { background: #f3f4f6; color: #222; font-family: 'Inter', Arial, sans-serif; }
@@ -94,7 +93,6 @@ const html = `<!DOCTYPE html>
             .join('')}
       </ul>
     </section>
-    <footer class="cv-footer">Last update: ${lastUpdate}</footer>
   </main>
 </body>
 </html>`;
