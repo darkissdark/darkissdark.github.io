@@ -21,43 +21,24 @@
 </template>
 
 <script lang="ts" setup>
+import { profile } from '../../data/profile';
 import { markRaw } from 'vue';
 import GithubIcon from '../../icons/GithubIcon.vue';
 import LinkedinIcon from '../../icons/LinkedinIcon.vue';
 import TelegramIcon from '../../icons/TelegramIcon.vue';
 import EmailIcon from '../../icons/EmailIcon.vue';
 
-interface Contact {
-    label: string;
-    href: string;
-    target: '_blank' | '_self';
-    icon: any;
-}
+const iconMap = {
+  GitHub: markRaw(GithubIcon),
+  LinkedIn: markRaw(LinkedinIcon),
+  Telegram: markRaw(TelegramIcon),
+  Email: markRaw(EmailIcon),
+} as const;
 
-const contacts: Contact[] = [
-    {
-        label: 'GitHub',
-        href: 'https://github.com/darkissdark',
-        target: '_blank',
-        icon: markRaw(GithubIcon),
-    },
-    {
-        label: 'LinkedIn',
-        href: 'https://www.linkedin.com/in/viktor-medvid-910160357/',
-        target: '_blank',
-        icon: markRaw(LinkedinIcon),
-    },
-    {
-        label: 'Telegram',
-        href: 'https://t.me/darkiss',
-        target: '_blank',
-        icon: markRaw(TelegramIcon),
-    },
-    {
-        label: 'Email',
-        href: 'mailto:darkissdark@gmail.com',
-        target: '_self',
-        icon: markRaw(EmailIcon),
-    },
-];
+type IconLabel = keyof typeof iconMap;
+
+const contacts = profile.contacts.map(c => ({
+  ...c,
+  icon: iconMap[c.label as IconLabel] ?? undefined,
+}));
 </script>

@@ -1,5 +1,5 @@
 <template>
-    <div class="relative flex flex-col items-center select-none pt-2">
+    <div class="relative flex flex-col items-center select-none pt-2 uppercase">
         <component
             :is="tag"
             class="flex flex-wrap justify-center gap-2 text-3xl sm:text-4xl font-extrabold"

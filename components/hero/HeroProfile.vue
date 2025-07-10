@@ -9,18 +9,18 @@
             <BlobMask class="absolute inset-0 w-full h-full" />
         </div>
         <div class="mt-4 text-xl font-semibold text-gray-800 flex items-center justify-center">
-            Hi, I'm Viktor
+            Hi, I'm {{ firstName }}
             <span class="wave inline-block">
                 <HandWave class="w-7 h-7 align-middle" />
             </span>
         </div>
         <AnimatedText tag="h1">
-            <template #text-stroke> FRONTEND </template>
-            <template #text-shine> DEVELOPER </template>
+            <template #text-stroke> {{ rolePartOne }} </template>
+            <template #text-shine> {{ rolePartTwo }} </template>
         </AnimatedText>
         <div class="w-full justify-center flex items-center gap-3 mt-6 z-10">
             <a
-                href="#"
+                href="/resume.pdf"
                 target="_blank"
                 class="flex items-center justify-center bg-[#488aec] text-white text-shadow font-bold text-base cursor-pointer text-center uppercase align-middle user-select-none shadow-lg border-none px-6 py-3 rounded-lg gap-2 transition duration-300 hover:bg-[#306cc6] size18"
             >
@@ -37,6 +37,12 @@ import BlobMask from '../icons/BlobMask.vue';
 import HandWave from '../icons/HandWave.vue';
 import ResumeIcon from '../icons/ResumeIcon.vue';
 import AnimatedText from '../common/AnimatedText.vue';
+import { profile } from '../../data/profile';
+
+const { name, role } = profile;
+
+const firstName = name.split(' ')[0];
+const [rolePartOne, rolePartTwo] = role.split(' ');
 </script>
 
 <style scoped>

@@ -61,45 +61,7 @@
 <script setup lang="ts">
 import GithubIcon from '../../icons/GithubIcon.vue';
 import VisitIcon from '../../icons/VisitIcon.vue';
+import { profile } from '../../data/profile';
 
-interface Project {
-    title: string;
-    description: string;
-    tags: string[];
-    visit: string;
-    source: string;
-    image: string;
-    disabled?: boolean;
-}
-
-const projects: Project[] = [
-    {
-        title: 'Portfolio',
-        description:
-            'Personal portfolio website built with Nuxt 3 and Tailwind CSS. Responsive, fast, and beautiful.',
-        tags: ['Nuxt3', 'Vue', 'TailwindCSS', 'TypeScript'],
-        visit: 'https://darkissdark.github.io',
-        source: 'https://github.com/darkissdark/darkissdark.github.io',
-        image: '/images/projects/portfolio.webp',
-        disabled: true,
-    },
-    {
-        title: 'Trello-like Application',
-        description:
-            'Features include creating and managing boards, adding and organizing tasks, responsive design, user authentication, custom board backgrounds, and drag & drop functionality for cards and lists.',
-        tags: ['React', 'Redux', 'TypeScript', 'SCSS'],
-        visit: 'https://darkissdark.github.io/my-trello/',
-        source: 'https://github.com/darkissdark/my-trello/',
-        image: '/images/projects/trello-like.webp',
-    },
-    {
-        title: 'DiGi - Digital Agency',
-        description:
-            'A training project for the frontend course at School of Programming «Shpp», showcasing modern web development practices.',
-        tags: ['HTML', 'CSS', 'JavaScript'],
-        visit: 'https://darkissdark.github.io/di-gi/',
-        source: 'https://github.com/darkissdark/di-gi',
-        image: '/images/projects/di-gi.webp',
-    },
-];
+const projects = profile.projects;
 </script>

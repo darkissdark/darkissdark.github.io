@@ -37,31 +37,7 @@
 
 <script setup lang="ts">
 import EducationIcon from '../../icons/EducationIcon.vue';
+import { profile } from '../../data/profile';
 
-interface EducationItem {
-    institution: string;
-    year: string;
-    description?: string;
-    link?: string;
-    linkText?: string;
-}
-
-const educationData: EducationItem[] = [
-    {
-        institution: 'School of Programming «Shpp»',
-        year: '2025',
-        link: 'https://diploma.programming.org.ua/en/d/ojM7n5vrkRO6DpdG1aebVW8Z43Y0yaEL',
-        linkText: 'Computer Science Basics',
-    },
-    {
-        institution: 'Vinnytsia National Technical University',
-        year: '2008 – 2013',
-        description: 'Institute of Civil Engineering, Thermal Power Engineering and Gas Supply',
-    },
-    {
-        institution: 'Vinnytsia Technical Lyceum',
-        year: '2004 – 2008',
-        description: 'Specialization in Informatics and Computer Technology',
-    },
-];
+const educationData = profile.education;
 </script>

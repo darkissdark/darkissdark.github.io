@@ -86,20 +86,20 @@
 </template>
 
 <script setup lang="ts">
-import lastUpdate from '../../lastUpdate.js';
+import lastUpdate from '../../lastUpdate';
+import { profile } from '../../data/profile';
+
+const { name, location, skills, tools, languages } = profile;
 
 const developer = {
     company: null,
     hireable: true,
     lastUpdate,
-    languages: [
-        { language: 'English', level: 'A2' },
-        { language: 'Ukrainian', level: 'Fluent' },
-    ],
-    location: 'Split, Croatia',
-    name: 'Viktor Medvid',
-    skills: ['Vue', 'Nuxt', 'React', 'JS', 'CSS', 'SASS'],
-    tools: ['Git', 'Figma', 'Webpack', 'Vite', 'Trello', 'Jira'],
+    name,
+    location,
+    skills,
+    tools,
+    languages,
 };
 
 const trafficLights = ['bg-red-400', 'bg-yellow-400', 'bg-green-400'];

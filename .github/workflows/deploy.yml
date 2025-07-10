@@ -26,6 +26,12 @@ jobs:
             - name: Generate static site
               run: yarn generate
 
+            - name: Generate resume.html
+              run: node scripts/generateResumeHtml.cjs
+
+            - name: Generate PDF resume
+              run: node scripts/generateResumePdf.cjs
+
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v4
               with:
