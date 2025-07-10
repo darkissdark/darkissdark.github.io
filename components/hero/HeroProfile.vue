@@ -31,11 +31,11 @@
     </div>
 </template>
 
-<script setup>
-import BlobBg from '../icons/BlobBg.vue';
-import BlobMask from '../icons/BlobMask.vue';
-import HandWave from '../icons/HandWave.vue';
-import ResumeIcon from '../icons/ResumeIcon.vue';
+<script lang="ts" setup>
+import BlobBg from '../../icons/BlobBg.vue';
+import BlobMask from '../../icons/BlobMask.vue';
+import HandWave from '../../icons/HandWave.vue';
+import ResumeIcon from '../../icons/ResumeIcon.vue';
 import AnimatedText from '../common/AnimatedText.vue';
 import { profile } from '../../data/profile';
 
