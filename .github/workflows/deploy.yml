@@ -35,6 +35,9 @@ jobs:
             - name: Generate PDF resume
               run: node scripts/generateResumePdf.cjs
 
+            - name: Generate Tailwind CSS for resume
+              run: npx tailwindcss -i ./resume-input.css -o ./public/tailwind-resume.css --minify
+
             - name: Copy viktor_medvid_cv.pdf to output
               run: cp public/viktor_medvid_cv.pdf .output/public/viktor_medvid_cv.pdf
 
