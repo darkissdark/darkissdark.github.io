@@ -40,8 +40,8 @@
     "projects": [
         {
             "title": "Portfolio",
-            "description": "Personal portfolio website built with Nuxt 3 and Tailwind CSS. Responsive, fast, and beautiful.",
-            "tags": ["Nuxt3", "Vue", "TailwindCSS", "TypeScript"],
+            "description": "Personal portfolio website built with Nuxt and Tailwind CSS. Responsive, fast, and beautiful.",
+            "tags": ["Vue", "Nuxt", "TypeScript", "TailwindCSS"],
             "visit": "https://darkissdark.github.io",
             "source": "https://github.com/darkissdark/darkissdark.github.io",
             "image": "/images/projects/portfolio.webp",

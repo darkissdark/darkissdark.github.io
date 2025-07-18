@@ -3,7 +3,6 @@
         <Swiper
             ref="swiperRef"
             :modules="[Navigation, Pagination]"
-            :slides-per-view="1"
             :space-between="24"
             :breakpoints="swiperBreakpoints"
             navigation
@@ -33,9 +32,9 @@ const props = defineProps<{ projects: Project[] }>();
 const swiperRef = ref(null);
 
 const swiperBreakpoints = {
-    640: { slidesPerView: 1 },
-    768: { slidesPerView: 2 },
-    1024: { slidesPerView: 2 },
+    640: { slidesPerView: 1, slidesPerGroup: 1 },
+    768: { slidesPerView: 2, slidesPerGroup: 1 },
+    1024: { slidesPerView: 2, slidesPerGroup: 1 },
 };
 </script>
 
@@ -57,4 +56,7 @@ const swiperBreakpoints = {
       right: -40px
   .swiper-button-prev
       left: -40px
+  @media (max-width: 639px)
+    .swiper-button-next
+      display: none
 </style>

@@ -6,7 +6,7 @@
             v-if="project.image"
             :src="project.image"
             :alt="`Preview image for ${project.title}`"
-            class="rounded-xl w-full object-cover mb-2 max-h-40"
+            class="rounded-xl w-full object-cover mb-2 max-h-90 md:max-h-60 lg:max-h-80"
             loading="lazy"
         />
 
