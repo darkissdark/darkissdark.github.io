@@ -5,14 +5,14 @@
         <Hero />
         <Contacts />
         <EducationSection />
-        <ProjectsGrid />
+        <ProjectsSection />
     </main>
 </template>
 
 <script setup lang="ts">
 import Hero from '../components/hero/Hero.vue';
 import Contacts from '../components/contacts/Contacts.vue';
-import ProjectsGrid from '../components/projects/ProjectsGrid.vue';
+import ProjectsSection from '../components/projects/ProjectsSection.vue';
 import EducationSection from '../components/education/EducationSection.vue';
 </script>
 

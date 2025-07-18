@@ -38,7 +38,7 @@ yarn generate
 
 -   **HeroProfile.vue** – Animated intro, avatar, "Get Resume" button
 -   **HeroCard.vue** – Code-style info card (with auto-updated last commit date)
--   **ProjectsGrid.vue** – Responsive project cards with tags, links, and images
+-   **ProjectsSection.vue** – Responsiv swiper of project cards with tags, links, and images
 -   **EducationSection.vue** – Modern education/certification cards with icon
 -   **Contacts.vue** – Social/contact icons (GitHub, Telegram, Email, LinkedIn)
 -   **AnimatedText.vue** – Gradient text, animated shine, floating stars

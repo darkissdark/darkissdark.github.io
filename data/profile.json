@@ -57,7 +57,7 @@
         },
         {
             "title": "DiGi - Digital Agency",
-            "description": "A training project for the frontend course at School of Programming «Shpp», showcasing modern web development practices.",
+            "description": "A training project for the frontend course at the School of Programming «Shpp», featuring semantic HTML, responsive design, retina-ready images, SVG sprites, font icons, and best practices in modern frontend development.",
             "tags": ["HTML", "CSS", "JavaScript"],
             "visit": "https://darkissdark.github.io/di-gi/",
             "source": "https://github.com/darkissdark/di-gi",

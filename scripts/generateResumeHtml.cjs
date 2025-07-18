@@ -3,7 +3,7 @@ const path = require('path');
 const profile = require('../data/profile.json');
 
 const css = `
-body { background: #f3f4f6; color: #222; font-family: 'Inter', Arial, sans-serif; }
+body { color: #222; font-family: 'Inter', Arial, sans-serif; }
 .cv-main { max-width: 700px; margin: 2rem auto; background: #fff; border-radius: 1.2rem; box-shadow: 0 4px 24px #0001; padding: 2.5rem; }
 .cv-header {  margin-bottom: 2rem; }
 .cv-avatar { width: 8rem; height: 8rem; border-radius: 50%; box-shadow: 0 2px 8px #0002; object-fit: cover; margin-bottom: 1rem; flex-grow: 0; }
