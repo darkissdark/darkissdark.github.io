@@ -1,5 +1,5 @@
 <template>
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center pb-8 lg:py-12">
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center pb-8 md:py-8">
         <HeroProfile />
         <HeroCard />
     </section>

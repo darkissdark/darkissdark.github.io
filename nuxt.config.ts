@@ -3,7 +3,12 @@ export default defineNuxtConfig({
     ssr: false,
     compatibilityDate: '2025-05-15',
     devtools: { enabled: true },
-    modules: ['@nuxtjs/tailwindcss', '@nuxtjs/critters'],
+    modules: ['@nuxtjs/tailwindcss', '@nuxtjs/critters', '@nuxtjs/color-mode'],
+    colorMode: {
+        classSuffix: '',
+        preference: 'system',
+        fallback: 'light',
+    },
     critters: {},
     app: {
         baseURL: '/',
