@@ -1,6 +1,6 @@
 <template>
     <section
-        class="bg-white/80 backdrop-blur-md rounded-xl shadow-lg border border-gray-200 p-6 mb-4 animate-fadeIn"
+        class="bg-bg/80 backdrop-blur-md rounded-xl shadow-lg border border-gray-200 p-6 mb-4 animate-fadeIn"
     >
         <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
             <EducationIcon />

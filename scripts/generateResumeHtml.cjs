@@ -48,7 +48,9 @@ const html = `<!DOCTYPE html>
             <div class="cv-role">Frontend Developer</div>
             <div class="cv-contacts">
             ${profile.contacts
-                .map((c) => `<a href="${c.href}" target="_blank">${c.label}</a>`)
+                .map(
+                    (c) => `<a href="${c.href}" class="cv-edu-link" target="_blank">${c.label}</a>`
+                )
                 .join('')}
                 <a href="https://darkissdark.github.io/" target="_blank">Portfolio</a>
             </div>

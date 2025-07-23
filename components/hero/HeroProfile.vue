@@ -1,6 +1,6 @@
 <template>
     <div
-        class="flex flex-col items-center justify-center rounded-xl p-4 sm:p-6 bg-white shadow-md h-full"
+        class="flex flex-col items-center justify-center rounded-xl p-4 sm:p-6 bg-bg text-txt shadow-md h-full"
     >
         <div class="relative w-40 h-40 md:w-48 md:h-48 flex items-center justify-center">
             <BlobBg
@@ -8,7 +8,7 @@
             />
             <BlobMask class="absolute inset-0 w-full h-full" />
         </div>
-        <div class="mt-4 text-xl font-semibold text-gray-800 flex items-center justify-center">
+        <div class="mt-4 text-xl font-semibold text-txt flex items-center justify-center">
             Hi, I'm {{ firstName }}
             <span class="wave inline-block">
                 <HandWave class="w-7 h-7 align-middle" />

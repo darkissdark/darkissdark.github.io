@@ -1,6 +1,6 @@
 <template>
     <article
-        class="bg-white rounded-3xl shadow-lg border border-gray-200 p-6 flex flex-col gap-4 hover:shadow-2xl transition-shadow duration-300"
+        class="bg-bg rounded-3xl shadow-lg border border-gray-200 p-6 flex flex-col gap-4 hover:shadow-2xl transition-shadow duration-300"
     >
         <img
             v-if="project.image"

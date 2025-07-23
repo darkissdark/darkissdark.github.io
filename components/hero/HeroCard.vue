@@ -1,7 +1,9 @@
 <template>
-    <div class="h-full flex flex-col rounded-xl shadow-lg border border-gray-200 bg-white">
+    <div class="h-full flex flex-col rounded-xl shadow-lg border border-bdr bg-bg text-txt">
         <!-- Browser tab imitation -->
-        <div class="flex items-center px-4 py-2 bg-gray-100 border-b border-gray-200">
+        <div
+            class="flex items-center px-4 py-2 bg-gray-100 dark:bg-comp border-b rounded-t-xl border-bdr"
+        >
             <div class="flex space-x-2">
                 <span
                     v-for="color in trafficLights"
@@ -9,16 +11,18 @@
                     :class="['w-3 h-3 rounded-full', color]"
                 ></span>
             </div>
-            <span class="ml-4 text-gray-700 text-xs select-none">Employees.vue</span>
+            <span class="ml-4 text-gray-700 dark:text-gray-400 text-xs select-none"
+                >Employees.vue</span
+            >
         </div>
 
         <!-- Code block -->
-        <div class="flex-1 bg-gray-50 p-4 sm:p-6 font-mono text-sm text-left rounded-b-xl">
+        <div class="flex-1 bg-comp-hover p-4 sm:p-6 font-mono text-sm text-left rounded-b-xl">
             <div>
-                <span class="text-blue-600">const</span>
-                <span class="text-blue-800"> employee </span>
-                <span class="text-blue-600">= </span>
-                <span class="text-gray-700">&#123;</span>
+                <span class="text-[#0000FF] dark:text-[#569CD6]">const</span>
+                <span class="text-[#001080] dark:text-[#9CDCFE]"> employee </span>
+                <span class="text-black dark:text-gray-300">= </span>
+                <span class="text-black dark:text-amber-300">&#123;</span>
             </div>
 
             <div
@@ -36,33 +40,41 @@
                 <template
                     v-if="Array.isArray(value) && value.every((item) => typeof item === 'object')"
                 >
-                    <span class="text-pink-600">[<br /></span>
+                    <span class="text-[#0000FF] dark:text-[#569CD6]">[<br /></span>
                     <template v-for="(item, i) in value" :key="i">
-                        <span class="text-gray-700 ml-4 inline-block">&#123;</span>
+                        <span class="text-black dark:text-amber-300 ml-4 inline-block">&#123;</span>
                         <template v-for="(subValue, subKey, idx) in item" :key="subKey">
-                            <span class="text-blue-900">{{ subKey }}</span
+                            <span class="dark:text-[#9CDCFE] text-blue-900">{{ subKey }}</span
                             >:
                             <span :class="getValueStyle(subValue)">
                                 {{ formatValue(subValue) }}
                             </span>
-                            <span v-if="idx < Object.keys(item).length - 1" class="text-gray-400"
+                            <span
+                                v-if="idx < Object.keys(item).length - 1"
+                                class="text-black dark:text-gray-300"
                                 >,
                             </span>
                         </template>
-                        <span class="text-gray-700">&#125;</span>
-                        <span v-if="i < value.length - 1" class="text-gray-400">,<br /></span>
+                        <span class="text-black dark:text-amber-300">&#125;</span>
+                        <span v-if="i < value.length - 1" class="text-black dark:text-gray-300"
+                            >,<br
+                        /></span>
                     </template>
-                    <span class="text-pink-600">]</span>
+                    <span class="text-[#0000FF] dark:text-[#569CD6]">]</span>
                 </template>
 
                 <!-- Simple Arrays -->
                 <span class="ml-4" v-else-if="Array.isArray(value)">
                     <template v-for="(v, index) in value" :key="index">
-                        <span v-if="index === 0" class="text-pink-600">[</span>
+                        <span v-if="index === 0" class="text-[#0000FF] dark:text-[#569CD6]">[</span>
                         <span :class="valueStyle.array">'{{ v }}'</span>
-                        <span v-if="index < value.length - 1" class="text-gray-400">, </span>
-                        <span v-if="index === value.length - 1" class="text-pink-600"
-                            >]<span class="text-gray-400">, </span></span
+                        <span v-if="index < value.length - 1" class="text-black dark:text-gray-300"
+                            >,
+                        </span>
+                        <span
+                            v-if="index === value.length - 1"
+                            class="text-[#0000FF] dark:text-[#569CD6]"
+                            >]<span class="text-black dark:text-gray-300">, </span></span
                         >
                     </template>
                 </span>
@@ -77,10 +89,13 @@
                 <template
                     v-if="Array.isArray(value) && value.every((item) => typeof item !== 'object')"
                 ></template>
-                <span v-else class="text-gray-400">,</span>
+                <span v-else class="text-black dark:text-gray-300">,</span>
             </div>
 
-            <div><span class="text-gray-700">&#125;;</span></div>
+            <div>
+                <span class="text-black dark:text-amber-300">&#125;</span
+                ><span class="text-black dark:text-gray-300">;</span>
+            </div>
         </div>
     </div>
 </template>
@@ -103,13 +118,13 @@ const developer = {
 };
 
 const trafficLights = ['bg-red-400', 'bg-yellow-400', 'bg-green-400'];
-const keysStyle = 'text-blue-900';
+const keysStyle = 'dark:text-[#9CDCFE] text-blue-900';
 const valueStyle = {
-    null: 'text-amber-700',
-    boolean: 'text-purple-600',
-    string: 'text-green-700',
-    array: 'text-green-700',
-    number: 'text-orange-600',
+    null: 'dark:text-[#569CD6] text-[#0000FF]',
+    boolean: 'dark:text-[#569CD6] text-[#0000FF]',
+    string: 'dark:text-[#CE9178] text-[#A31515]',
+    array: 'dark:text-[#CE9178] text-[#A31515]',
+    number: 'text-orange-400',
 };
 
 const getValueStyle = (value: unknown): string => {

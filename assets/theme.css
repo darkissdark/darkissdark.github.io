@@ -1,0 +1,29 @@
+:root {
+    --clr-bg: #fff;
+    --clr-txt: #1a1e23;
+    --clr-txt-sec: rgba(26, 30, 35, 0.5);
+    --clr-bdr: #e8eaee;
+    --clr-comp: #fff;
+    --clr-comp-hover: #f9fafb;
+    --clr-accent: #488aec;
+    --clr-accent2: #6c48c5;
+    --clr-accent3: #c68fe6;
+    --clr-sec: #e82561;
+    --tooltip-bg: #333;
+    --tooltip-txt: #fff;
+}
+
+html.dark {
+    --clr-bg: #0d1117;
+    --clr-txt: #dad9ff;
+    --clr-txt-sec: rgba(240, 246, 252, 0.5);
+    --clr-bdr: #3d444d;
+    --clr-comp: #212830;
+    --clr-comp-hover: #3a4148;
+    --clr-accent: #488aec;
+    --clr-accent2: #7896f8;
+    --clr-accent3: #c68fe6;
+    --clr-sec: #e82561;
+    --tooltip-bg: #efefef;
+    --tooltip-txt: #333;
+}

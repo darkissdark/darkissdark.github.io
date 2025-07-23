@@ -4,11 +4,14 @@
             :is="tag"
             class="flex flex-wrap justify-center gap-2 text-3xl sm:text-4xl font-extrabold"
         >
-            <span v-if="$slots['text-stroke']" class="text-stroke">
+            <span v-if="$slots['text-stroke']" class="text-stroke text-white dark:text-[#0d1117]">
                 <slot name="text-stroke"> </slot>
             </span>
 
-            <span v-if="$slots['text-shine']" class="relative text-[#3b82f6] overflow-hidden">
+            <span
+                v-if="$slots['text-shine']"
+                class="relative text-[#3b82f6] dark:text-[#488aec] overflow-hidden"
+            >
                 <span class="shine"></span>
                 <slot name="text-shine"></slot>
             </span>
@@ -91,7 +94,6 @@ onMounted(() => {
 
 <style>
 .text-stroke {
-    color: #fff;
     letter-spacing: 1px;
     text-shadow: -1px -1px 0 #3b82f6, 1px -1px 0 #3b82f6, -1px 1px 0 #3b82f6, 1px 1px 0 #3b82f6;
 }
