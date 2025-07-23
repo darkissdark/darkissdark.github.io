@@ -12,8 +12,7 @@
                 v-if="$slots['text-shine']"
                 class="relative text-[#3b82f6] dark:text-[#488aec] overflow-hidden"
             >
-                <span class="shine"></span>
-                <slot name="text-shine"></slot>
+                <span class="shine-text"><slot name="text-shine"></slot></span>
             </span>
 
             <slot></slot>
@@ -97,7 +96,7 @@ onMounted(() => {
     letter-spacing: 1px;
     text-shadow: -1px -1px 0 #3b82f6, 1px -1px 0 #3b82f6, -1px 1px 0 #3b82f6, 1px 1px 0 #3b82f6;
 }
-.shine {
+/* .shine {
     position: absolute;
     top: 0;
     left: -75%;
@@ -109,14 +108,46 @@ onMounted(() => {
     animation: shine-move 2.2s linear infinite;
 }
 
+.dark .shine {
+    background: linear-gradient(
+        120deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        transparent 100%
+    );
+    opacity: 0.35;
+} */
+
+.shine-text {
+    background: linear-gradient(90deg, #3b82f6 40%, #fff 45%, #3b82f6 50%);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: shine-move 5.5s linear infinite;
+}
+
 @keyframes shine-move {
+    0% {
+        background-position: -200% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+.dark .shine-text {
+    background-image: linear-gradient(90deg, #488aec 40%, #cbd5e1 50%, #488aec 60%);
+}
+
+/* @keyframes shine-move {
     0% {
         left: -75%;
     }
     100% {
         left: 120%;
     }
-}
+} */
 
 @keyframes star-fade {
     0% {
