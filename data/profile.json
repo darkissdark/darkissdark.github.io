@@ -13,7 +13,7 @@
         },
         { "label": "GitHub", "href": "https://github.com/darkissdark", "target": "_blank" }
     ],
-    "skills": ["Vue", "Nuxt", "React", "Redux", "TS", "SASS", "CSS", "HTML"],
+    "skills": ["Vue", "Nuxt", "React", "Redux", "TS", "REST API", "SASS / CSS", "HTML"],
     "tools": ["Git", "Figma", "Webpack", "Vite", "Trello", "Jira"],
     "languages": [
         { "language": "English", "level": "Pre-intermediate" },

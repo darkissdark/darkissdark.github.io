@@ -8,14 +8,14 @@ a { color: #222; font-size: 14px; position: relative; left: -5px; }
 a.static { position: static; left: 0; }
 .cv-main { width: 65%; margin-left: 35%; }
 .cv-header {  margin-bottom: 2rem; }
-.cv-title { font-size: 18pxrem; font-weight: 700; margin-bottom: 0.2rem; text-transform: uppercase;}
-.cv-role { font-size: 16pxrem; font-weight: 600; margin-bottom: 0.5rem; }
+.cv-title { font-size: 18px; font-weight: 700; margin-bottom: 0.2rem; text-transform: uppercase;}
+.cv-role { font-size: 16px; font-weight: 600; margin-bottom: 0.5rem; }
 .cv-section { margin-bottom: 20px; }
 .cv-aside { width: 30%; float: left; }
 .mb-10 {margin-bottom: 10px;}
 .mb-5 {margin-bottom: 5px;}
 .mb-15 {margin-bottom: 15px;}
-.cv-section-title { color: #222; font-size: 1.3rem; font-weight: 700; margin-bottom: 0.7rem; letter-spacing: 0.01em; }
+.cv-section-title { color: #222; font-size: 16px; font-weight: 700; margin-bottom: 0.7rem; letter-spacing: 0.01em; }
 .cv-list {  padding: 0; margin: 0; }
 .cv-list li {  margin-bottom: 5px; }
 .cv-list.disc { list-style: disc; }
@@ -35,7 +35,7 @@ const html = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${profile.name} — Resume</title>
+  <title>${profile.name} ${profile.role} — Resume</title>
   <style>${css}</style>
 </head>
 <body>
@@ -50,7 +50,7 @@ const html = `<!DOCTYPE html>
           <li><a class="static" href="tel:+380939280755">+380 93 92 80 755</a></li>
           ${profile.contacts
               .map(
-                  (c) => `<li><a class="static" href="${c.href}" class="cv-edu-link" target="_blank">${c.label}</a></li>`
+                  (c) => `<li><a class="static" href="${c.href}" class="cv-edu-link" target="_blank">${c.label === 'Email' ? c.href : c.label}</a></li>`
               )
               .join('')}
           <li>${profile.location}</li>
@@ -62,7 +62,7 @@ const html = `<!DOCTYPE html>
             ${profile.skills.reduce((acc, skill, index) => {
                 if (index % 2 === 0) {
                     if (index + 1 < profile.skills.length) {
-                        acc.push(`<li>${skill} | ${profile.skills[index + 1]}</li>`);
+                        acc.push(`<li>${skill}, ${profile.skills[index + 1]}</li>`);
                     } else {
                         acc.push(`<li>${skill}</li>`);
                     }
