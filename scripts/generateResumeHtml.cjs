@@ -3,15 +3,13 @@ const path = require('path');
 const profile = require('../data/profile.json');
 
 const css = `
-body { color: #222; font-family: 'Inter', Arial, sans-serif; line-height: 1.5; }
-a { color: #222; }
+body { color: #222; font-family: 'Inter', Arial, sans-serif; line-height: 1.5; font-size: 14px; }
+a { color: #222; font-size: 14px; margin-left: -3px; }
 .cv-main { width: 65%; margin-left: 35%; }
 .cv-header {  margin-bottom: 2rem; }
-.cv-title { font-size: 1.6rem; font-weight: 700; margin-bottom: 0.2rem; text-transform: uppercase;}
-.cv-role { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem; }
-.cv-contacts { display: flex; gap: 1.2rem; margin-bottom: 0.5rem; }
-.cv-contacts a { color: #555; text-decoration: none; font-size: 1rem; border-bottom: 1px solid #555; }
-.cv-section { margin-bottom: 2rem; }
+.cv-title { font-size: 18pxrem; font-weight: 700; margin-bottom: 0.2rem; text-transform: uppercase;}
+.cv-role { font-size: 16pxrem; font-weight: 600; margin-bottom: 0.5rem; }
+.cv-section { margin-bottom: 20px; }
 .cv-aside { width: 30%; float: left; }
 .mb-10 {margin-bottom: 10px;}
 .mb-5 {margin-bottom: 5px;}
@@ -91,10 +89,9 @@ const html = `<!DOCTYPE html>
       ${profile.projects
           .map(
             (p) => 
-      `<div class="cv-project">${p.visit ? `<a href="${p.visit}" target="_blank" class="cv-edu-link bold">${p.title}</a>` : ''}, <a href="${p.source}" target="_blank" class="cv-edu-link bold">GitHub-repository</a> <span class="size12">(${p.tags.join(', ')})</span>
+      `<div class="cv-project">${p.visit ? `<a href="${p.visit}" target="_blank" class="cv-edu-link bold">${p.title}</a>` : ''}, <a href="${p.source}" target="_blank" class="cv-edu-link bold">Source</a> <span class="size12">(${p.tags.join(', ')})</span>
         <div class="cv-project-description mb-5 mt-5">${p.description}</div>
-        <div class="cv-project-role mb-5">Role: <span class="bold">${p.role}</span></div>
-        <div class="cv-project-individual mb-10"> <span class="bold">${p.type}</span> project.</div>
+        <div class="cv-project-role mb-5 mb-10"><span class="bold">Role:</span> ${p.role}, ${p.type ? `${p.type} project` : ''}</div>
       </div>`
           )
           .join('')}

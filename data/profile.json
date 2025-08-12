@@ -61,8 +61,7 @@
             "visit": "https://darkissdark.github.io/my-trello/",
             "source": "https://github.com/darkissdark/my-trello/",
             "image": "/images/projects/trello-like.webp",
-            "role": "developer",
-            "type": "individual"
+            "role": "developer"
         },
         {
             "title": "Booksy - Find your next favorite read",
@@ -71,8 +70,7 @@
             "visit": "https://darkissdark.github.io/development-hell-02/",
             "source": "https://github.com/darkissdark/development-hell-02",
             "image": "/images/projects/booksy.webp",
-            "role": "Team Lead, developer",
-            "type": "team"
+            "role": "Team Lead, developer"
         },
         {
             "title": "DiGi - Digital Agency",
@@ -81,8 +79,7 @@
             "visit": "https://darkissdark.github.io/di-gi/",
             "source": "https://github.com/darkissdark/di-gi",
             "image": "/images/projects/di-gi.webp",
-            "role": "developer",
-            "type": "individual"
+            "role": "developer"
         }
     ]
 }
