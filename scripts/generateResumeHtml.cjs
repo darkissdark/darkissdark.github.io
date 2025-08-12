@@ -50,7 +50,7 @@ const html = `<!DOCTYPE html>
           <li><a class="static" href="tel:+380939280755">+380 93 92 80 755</a></li>
           ${profile.contacts
               .map(
-                  (c) => `<li><a class="static" href="${c.href}" class="cv-edu-link" target="_blank">${c.label === 'Email' ? c.href : c.label}</a></li>`
+                  (c) => `<li><a class="static" href="${c.href}" class="cv-edu-link" target="_blank">${c.label === 'Email' ? 'darkissdark@gmail.com' : c.label}</a></li>`
               )
               .join('')}
           <li>${profile.location}</li>
@@ -77,7 +77,7 @@ const html = `<!DOCTYPE html>
             ${profile.tools.reduce((acc, tool, index) => {
                 if (index % 2 === 0) {
                     if (index + 1 < profile.tools.length) {
-                        acc.push(`<li>${tool} | ${profile.tools[index + 1]}</li>`);
+                        acc.push(`<li>${tool}, ${profile.tools[index + 1]}</li>`);
                     } else {
                         acc.push(`<li>${tool}</li>`);
                     }
