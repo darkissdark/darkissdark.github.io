@@ -5,7 +5,7 @@ const profile = require('../data/profile.json');
 const css = `
 body { color: #222; font-family: 'Inter', Arial, sans-serif; }
 .cv-main { width: 65%; margin-left: 35%; }
-.cv-header {  margin-bottom: 2rem; text-align: center; }
+.cv-header {  margin-bottom: 2rem; }
 .cv-title { font-size: 1.6rem; font-weight: 700; margin-bottom: 0.2rem; text-transform: uppercase;}
 .cv-role { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem; }
 .cv-contacts { display: flex; gap: 1.2rem; margin-bottom: 0.5rem; }
@@ -14,16 +14,16 @@ body { color: #222; font-family: 'Inter', Arial, sans-serif; }
 .cv-aside { width: 30%; float: left; }
 .mb-10 {margin-bottom: 10px;}
 .cv-section-title { color: #222; font-size: 1.3rem; font-weight: 700; margin-bottom: 0.7rem; letter-spacing: 0.01em; }
-.cv-list { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; padding: 0; margin: 0; }
-.cv-list li { background: #e0e7ef; color: #2563eb; border-radius: 0.5rem; padding: 0.3rem 0.9rem; font-size: 0.98rem; font-weight: 500; }
+.cv-list { list-style: none; padding: 0; margin: 0; }
+.cv-list li {  font-size: 0.98rem; }
 .cv-list.tools { list-style: disc }
 .cv-list.lang { list-style: disc }
 .cv-edu-list { list-style: none; padding: 0; margin: 0; }
 .cv-edu-item { margin-bottom: 1.1rem; }
-.cv-edu-inst { font-weight: 600; color: #1e3a8a; font-size: 1.08rem; }
-.cv-edu-year { color: #555; font-size: 0.98rem; margin-left: 0.5rem; }
-.cv-edu-desc, .cv-edu-link { color: #555; font-size: 0.97rem; }
-.cv-edu-link { color: #2563eb; text-decoration: underline; margin-left: 0.3rem; }
+.cv-edu-inst { font-weight: 600; font-size: 1.08rem; }
+.cv-edu-year { font-size: 0.98rem; margin-left: 0.5rem; }
+.cv-edu-desc, .cv-edu-link { font-size: 0.97rem; }
+.cv-edu-link {  text-decoration: underline; margin-left: 0.3rem; }
 .cv-footer { text-align: center; color: #bbb; font-size: 0.9rem; margin-top: 2.5rem; }
 .flex{ display: flex; gap: 2rem; }
 `;
@@ -45,7 +45,7 @@ const html = `<!DOCTYPE html>
     <section class="cv-section">
         <div class="cv-section-title">Contacts</div>
         <ul class="cv-list tools">
-          <li><a href="tel:+380939280755>+380 93 92 80 755</a></li>
+          <li><a href="tel:+380939280755">+380 93 92 80 755</a></li>
           ${profile.contacts
               .map(
                   (c) => `<li><a href="${c.href}" class="cv-edu-link" target="_blank">${c.label}</a></li>`
@@ -76,7 +76,6 @@ const html = `<!DOCTYPE html>
   <main class="cv-main">
     <section class="cv-section">
       <div class="cv-section-title">Summary</div>
-      <p>Experienced Fullstack Developer with a strong foundation in modern web technologies and a passion for creating exceptional user experiences. Specialized in Vue.js ecosystem (Vue 3, Nuxt 3) and React development, with expertise in TypeScript, responsive design, and accessibility best practices.</p>
       
       <p>Demonstrated ability to lead development teams and deliver high-quality projects from concept to deployment. Proven track record of building sophisticated applications including interactive dashboards, e-commerce platforms, and responsive web applications. Committed to writing clean, maintainable code and implementing modern development workflows with CI/CD pipelines.</p>
       
@@ -87,8 +86,9 @@ const html = `<!DOCTYPE html>
       
       ${profile.projects
           .map(
-              (p) => `<div class="cv-project">
-        ${p.visit ? `(<a href="${p.visit}" target="_blank" class="cv-edu-link">${p.title}</a>)` : ''}, <a href="${p.source}" target="_blank" class="cv-edu-link">GitHub-repository</a> (${p.tags.join(', ')})
+            (p) => 
+      `<div class="cv-project">
+        ${p.visit ? `<a href="${p.visit}" target="_blank" class="cv-edu-link">${p.title}</a>` : ''}, <a href="${p.source}" target="_blank" class="cv-edu-link">GitHub-repository</a> (${p.tags.join(', ')})
         <div class="cv-project-description">${p.description}</div>
         <div class="cv-project-role">Role: ${p.role}</div>
         <div class="cv-project-individual mb-10">${p.type} project.</div>
