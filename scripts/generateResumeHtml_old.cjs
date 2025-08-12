@@ -100,6 +100,6 @@ const html = `<!DOCTYPE html>
 </body>
 </html>`;
 
-const outPath = path.resolve(__dirname, '../public/viktor_medvid_fullstack.html');
+const outPath = path.resolve(__dirname, '../public/Viktor_Medvid_Fullstack_Developer.html');
 fs.writeFileSync(outPath, html, 'utf-8');
-console.log('viktor_medvid_fullstack.html generated at:', outPath);
+console.log('Viktor_Medvid_Fullstack_Developer.html generated at:', outPath);

@@ -13,7 +13,7 @@
         },
         { "label": "GitHub", "href": "https://github.com/darkissdark", "target": "_blank" }
     ],
-    "skills": ["Vue", "Nuxt", "React", "Redux", "TS", "SASS", "HTML", "CSS"],
+    "skills": ["Vue", "Nuxt", "React", "Redux", "TS", "SASS", "CSS", "HTML"],
     "tools": ["Git", "Figma", "Webpack", "Vite", "Trello", "Jira"],
     "languages": [
         { "language": "English", "level": "Pre-intermediate" },
@@ -64,7 +64,7 @@
             "role": "developer"
         },
         {
-            "title": "Booksy - Find your next favorite read",
+            "title": "Book Finder",
             "description": "A training project for the frontend course at the IT School «GoIT», featuring semantic HTML, responsive design, retina-ready images, SVG sprites, and best practices in modern frontend development.",
             "tags": ["JavaScript", "Vite", "HTML", "CSS"],
             "visit": "https://darkissdark.github.io/development-hell-02/",
@@ -73,7 +73,7 @@
             "role": "Team Lead, developer"
         },
         {
-            "title": "DiGi - Digital Agency",
+            "title": "Digital Agency",
             "description": "A training project for the frontend course at the School of Programming «Shpp», featuring semantic HTML, responsive design, retina-ready images, SVG sprites, font icons, and best practices in modern frontend development.",
             "tags": ["JavaScript", "HTML", "CSS"],
             "visit": "https://darkissdark.github.io/di-gi/",

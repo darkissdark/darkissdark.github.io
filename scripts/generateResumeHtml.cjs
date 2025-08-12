@@ -4,7 +4,8 @@ const profile = require('../data/profile.json');
 
 const css = `
 body { color: #222; font-family: 'Inter', Arial, sans-serif; line-height: 1.5; font-size: 14px; }
-a { color: #222; font-size: 14px; position: relative; left: -3px; }
+a { color: #222; font-size: 14px; position: relative; left: -5px; }
+a.static { position: static; left: 0; }
 .cv-main { width: 65%; margin-left: 35%; }
 .cv-header {  margin-bottom: 2rem; }
 .cv-title { font-size: 18pxrem; font-weight: 700; margin-bottom: 0.2rem; text-transform: uppercase;}
@@ -19,7 +20,7 @@ a { color: #222; font-size: 14px; position: relative; left: -3px; }
 .cv-list li {  margin-bottom: 5px; }
 .cv-list.disc { list-style: disc; }
 .cv-edu-list { list-style: none; padding: 0; margin: 0; }
-.cv-edu-item { margin-bottom: 10px; }
+.cv-edu-item { margin-bottom: 15px; }
 .cv-edu-inst { font-weight: 600; font-size: 1.08rem; }
 .cv-edu-year { font-size: 0.98rem; margin-left: 0.5rem; }
 .cv-edu-link {  text-decoration: underline; margin-left: 0.3rem; }
@@ -46,10 +47,10 @@ const html = `<!DOCTYPE html>
     <section class="cv-section">
         <div class="cv-section-title">Contacts</div>
         <ul class="cv-list">
-          <li><a href="tel:+380939280755">+380 93 92 80 755</a></li>
+          <li><a class="static" href="tel:+380939280755">+380 93 92 80 755</a></li>
           ${profile.contacts
               .map(
-                  (c) => `<li><a href="${c.href}" class="cv-edu-link" target="_blank">${c.label}</a></li>`
+                  (c) => `<li><a class="static" href="${c.href}" class="cv-edu-link" target="_blank">${c.label}</a></li>`
               )
               .join('')}
           <li>${profile.location}</li>
@@ -58,13 +59,31 @@ const html = `<!DOCTYPE html>
     <section class="cv-section">
         <div class="cv-section-title">Tech Skills</div>
         <ul class="cv-list disc">
-            ${profile.skills.map((s) => `<li>${s}</li>`).join('')}
+            ${profile.skills.reduce((acc, skill, index) => {
+                if (index % 2 === 0) {
+                    if (index + 1 < profile.skills.length) {
+                        acc.push(`<li>${skill} | ${profile.skills[index + 1]}</li>`);
+                    } else {
+                        acc.push(`<li>${skill}</li>`);
+                    }
+                }
+                return acc;
+            }, []).join('')}
         </ul>
     </section>
     <section class="cv-section">
         <div class="cv-section-title">Tools</div>
         <ul class="cv-list disc">
-            ${profile.tools.map((t) => `<li>${t}</li>`).join('')}
+            ${profile.tools.reduce((acc, tool, index) => {
+                if (index % 2 === 0) {
+                    if (index + 1 < profile.tools.length) {
+                        acc.push(`<li>${tool} | ${profile.tools[index + 1]}</li>`);
+                    } else {
+                        acc.push(`<li>${tool}</li>`);
+                    }
+                }
+                return acc;
+            }, []).join('')}
         </ul>
     </section>
     <section class="cv-section">
@@ -77,12 +96,7 @@ const html = `<!DOCTYPE html>
   <main class="cv-main">
     <section class="cv-section">
       <div class="cv-section-title">Summary</div>
-      Inspired Fullstack developer with strong analytical thinking
-      and well-developed organizational skills. Ambitious, highly
-      responsible, punctual, and goal- oriented person, always
-      ready to learn and gain new experiences. The ability to focus
-      on details and time management are also good strengths of
-      mine. Friendly team player with a good sense of humor.
+      Fullstack developer with strong front-end expertise and growing back-end skills. Responsible, adaptable, and a great team fit, with proven strengths in time management and task prioritization.
     </section>
     <section class="cv-section">
       <div class="cv-section-title">Project experience</div>
@@ -90,7 +104,7 @@ const html = `<!DOCTYPE html>
       ${profile.projects
           .map(
             (p) => 
-      `<div class="cv-project">${p.visit ? `<a href="${p.visit}" target="_blank" class="cv-edu-link bold">${p.title}</a>` : ''}, <a href="${p.source}" target="_blank" class="cv-edu-link bold">Source</a> <span class="size12">(${p.tags.join(', ')})</span>
+      `<div class="cv-project">${p.visit ? `<a href="${p.visit}" target="_blank" class="cv-edu-link bold">${p.title}</a>` : ''}| <a href="${p.source}" target="_blank" class="cv-edu-link bold">Source</a> <span class="size12">(${p.tags.join(', ')})</span>
         <div class="cv-project-description mb-5 mt-5">${p.description}</div>
         <div class="cv-project-role mb-5 mb-15"><span class="bold">Role:</span> ${p.role}${p.type ? `, ${p.type} project` : ''}</div>
       </div>`
@@ -118,6 +132,6 @@ const html = `<!DOCTYPE html>
 </body>
 </html>`;
 
-const outPath = path.resolve(__dirname, '../public/viktor_medvid_fullstack.html');
+const outPath = path.resolve(__dirname, '../public/Viktor_Medvid_Fullstack_Developer.html');
 fs.writeFileSync(outPath, html, 'utf-8');
-console.log('viktor_medvid_fullstack.html generated at:', outPath);
+console.log('Viktor_Medvid_Fullstack_Developer.html generated at:', outPath);
