@@ -13,7 +13,7 @@
         },
         { "label": "GitHub", "href": "https://github.com/darkissdark", "target": "_blank" }
     ],
-    "skills": ["Vue", "Nuxt", "React", "Redux", "TypeScript", "SASS", "HTML", "CSS"],
+    "skills": ["Vue", "Nuxt", "React", "Redux", "TS", "SASS", "HTML", "CSS"],
     "tools": ["Git", "Figma", "Webpack", "Vite", "Trello", "Jira"],
     "languages": [
         { "language": "English", "level": "Pre-intermediate" },
@@ -46,7 +46,7 @@
         {
             "title": "Portfolio",
             "description": "A sophisticated, fully-responsive portfolio showcasing modern web development skills. Includes automated PDF resume generation and is deployed on GitHub Pages with CI/CD pipeline.",
-            "tags": ["Vue", "Nuxt", "TypeScript", "TailwindCSS"],
+            "tags": ["Vue", "Nuxt", "TS", "TailwindCSS"],
             "visit": "https://darkissdark.github.io",
             "source": "https://github.com/darkissdark/darkissdark.github.io",
             "image": "/images/projects/portfolio.webp",
@@ -71,7 +71,7 @@
             "visit": "https://darkissdark.github.io/development-hell-02/",
             "source": "https://github.com/darkissdark/development-hell-02",
             "image": "/images/projects/booksy.webp",
-            "role": "team lead",
+            "role": "Team Lead, developer",
             "type": "team"
         },
         {

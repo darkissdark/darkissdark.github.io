@@ -3,7 +3,8 @@ const path = require('path');
 const profile = require('../data/profile.json');
 
 const css = `
-body { color: #222; font-family: 'Inter', Arial, sans-serif; }
+body { color: #222; font-family: 'Inter', Arial, sans-serif; line-height: 1.5; }
+a { color: #222; }
 .cv-main { width: 65%; margin-left: 35%; }
 .cv-header {  margin-bottom: 2rem; }
 .cv-title { font-size: 1.6rem; font-weight: 700; margin-bottom: 0.2rem; text-transform: uppercase;}
@@ -13,11 +14,11 @@ body { color: #222; font-family: 'Inter', Arial, sans-serif; }
 .cv-section { margin-bottom: 2rem; }
 .cv-aside { width: 30%; float: left; }
 .mb-10 {margin-bottom: 10px;}
+.mb-5 {margin-bottom: 5px;}
 .cv-section-title { color: #222; font-size: 1.3rem; font-weight: 700; margin-bottom: 0.7rem; letter-spacing: 0.01em; }
 .cv-list { list-style: none; padding: 0; margin: 0; }
-.cv-list li {  font-size: 0.98rem; }
-.cv-list.tools { list-style: disc }
-.cv-list.lang { list-style: disc }
+.cv-list li {  font-size: 0.98rem; margin-bottom: 5px; }
+.cv-list.disc { list-style: disc }
 .cv-edu-list { list-style: none; padding: 0; margin: 0; }
 .cv-edu-item { margin-bottom: 1.1rem; }
 .cv-edu-inst { font-weight: 600; font-size: 1.08rem; }
@@ -56,19 +57,19 @@ const html = `<!DOCTYPE html>
     </section>
     <section class="cv-section">
         <div class="cv-section-title">Tech Skills</div>
-        <ul class="cv-list tools">
+        <ul class="cv-list disc">
             ${profile.skills.map((s) => `<li>${s}</li>`).join('')}
         </ul>
     </section>
     <section class="cv-section">
         <div class="cv-section-title">Tools</div>
-        <ul class="cv-list tools">
+        <ul class="cv-list disc">
             ${profile.tools.map((t) => `<li>${t}</li>`).join('')}
         </ul>
     </section>
     <section class="cv-section">
       <div class="cv-section-title">Languages</div>
-      <ul class="cv-list tools">
+      <ul class="cv-list disc">
         ${profile.languages.map((l) => `<li>${l.language} (${l.level})</li>`).join('')}
       </ul>
     </section>
@@ -76,10 +77,12 @@ const html = `<!DOCTYPE html>
   <main class="cv-main">
     <section class="cv-section">
       <div class="cv-section-title">Summary</div>
-      
-      <p>Demonstrated ability to lead development teams and deliver high-quality projects from concept to deployment. Proven track record of building sophisticated applications including interactive dashboards, e-commerce platforms, and responsive web applications. Committed to writing clean, maintainable code and implementing modern development workflows with CI/CD pipelines.</p>
-      
-      <p>Currently expanding skills through advanced education at IT School GoIT and School of Programming «Shpp», while actively contributing to open-source projects and maintaining a professional portfolio showcasing technical expertise and project management capabilities.</p>
+      Inspired Fullstack developer with strong analytical thinking
+      and well-developed organizational skills. Ambitious, highly
+      responsible, punctual, and goal- oriented person, always
+      ready to learn and gain new experiences. The ability to focus
+      on details and time management are also good strengths of
+      mine. Friendly team player with a good sense of humor.
     </section>
     <section class="cv-section">
       <div class="cv-section-title">Project experience</div>
@@ -89,9 +92,9 @@ const html = `<!DOCTYPE html>
             (p) => 
       `<div class="cv-project">
         ${p.visit ? `<a href="${p.visit}" target="_blank" class="cv-edu-link">${p.title}</a>` : ''}, <a href="${p.source}" target="_blank" class="cv-edu-link">GitHub-repository</a> (${p.tags.join(', ')})
-        <div class="cv-project-description">${p.description}</div>
-        <div class="cv-project-role">Role: ${p.role}</div>
-        <div class="cv-project-individual mb-10">${p.type} project.</div>
+        <div class="cv-project-description mb-5 mt-5">${p.description}</div>
+        <div class="cv-project-role mb-5">Role: <span class="bold">${p.role}</span></div>
+        <div class="cv-project-individual mb-10"> <span class="bold">${p.type}</span> project.</div>
       </div>`
           )
           .join('')}
