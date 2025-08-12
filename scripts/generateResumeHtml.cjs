@@ -16,17 +16,18 @@ a { color: #222; }
 .mb-10 {margin-bottom: 10px;}
 .mb-5 {margin-bottom: 5px;}
 .cv-section-title { color: #222; font-size: 1.3rem; font-weight: 700; margin-bottom: 0.7rem; letter-spacing: 0.01em; }
-.cv-list { list-style: none; padding: 0; margin: 0; }
-.cv-list li {  font-size: 0.98rem; margin-bottom: 5px; }
-.cv-list.disc { list-style: disc }
+.cv-list {  padding: 0; margin: 0; }
+.cv-list li {  margin-bottom: 5px; }
+.cv-list.disc { list-style: disc; }
 .cv-edu-list { list-style: none; padding: 0; margin: 0; }
 .cv-edu-item { margin-bottom: 1.1rem; }
 .cv-edu-inst { font-weight: 600; font-size: 1.08rem; }
 .cv-edu-year { font-size: 0.98rem; margin-left: 0.5rem; }
-.cv-edu-desc, .cv-edu-link { font-size: 0.97rem; }
 .cv-edu-link {  text-decoration: underline; margin-left: 0.3rem; }
 .cv-footer { text-align: center; color: #bbb; font-size: 0.9rem; margin-top: 2.5rem; }
 .flex{ display: flex; gap: 2rem; }
+.bold { font-weight: 600; }
+.size12 { font-size: 12px; }
 `;
 
 const html = `<!DOCTYPE html>
@@ -45,7 +46,7 @@ const html = `<!DOCTYPE html>
   <aside class="cv-aside">
     <section class="cv-section">
         <div class="cv-section-title">Contacts</div>
-        <ul class="cv-list tools">
+        <ul class="cv-list">
           <li><a href="tel:+380939280755">+380 93 92 80 755</a></li>
           ${profile.contacts
               .map(
@@ -90,8 +91,7 @@ const html = `<!DOCTYPE html>
       ${profile.projects
           .map(
             (p) => 
-      `<div class="cv-project">
-        ${p.visit ? `<a href="${p.visit}" target="_blank" class="cv-edu-link">${p.title}</a>` : ''}, <a href="${p.source}" target="_blank" class="cv-edu-link">GitHub-repository</a> (${p.tags.join(', ')})
+      `<div class="cv-project">${p.visit ? `<a href="${p.visit}" target="_blank" class="cv-edu-link bold">${p.title}</a>` : ''}, <a href="${p.source}" target="_blank" class="cv-edu-link bold">GitHub-repository</a> <span class="size12">(${p.tags.join(', ')})</span>
         <div class="cv-project-description mb-5 mt-5">${p.description}</div>
         <div class="cv-project-role mb-5">Role: <span class="bold">${p.role}</span></div>
         <div class="cv-project-individual mb-10"> <span class="bold">${p.type}</span> project.</div>
@@ -109,7 +109,7 @@ const html = `<!DOCTYPE html>
                         e.institution
                     }</span><span class="cv-edu-year">${e.year}</span>${
                         e.link
-                            ? `<a href="${e.link}" target="_blank" class="cv-edu-link">${e.linkText}</a>`
+                            ? `<div class="cv-edu-desc"><a href="${e.link}" target="_blank" class="cv-edu-link">${e.linkText}</a></div>`
                             : ''
                     }${e.description ? `<div class="cv-edu-desc">${e.description}</div>` : ''}</li>`
             )
