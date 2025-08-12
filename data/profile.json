@@ -1,25 +1,30 @@
 {
     "name": "Viktor Medvid",
-    "role": "Frontend Developer",
+    "role": "Fullstack Developer",
     "avatar": "/images/me.webp",
     "location": "Split, Croatia",
     "contacts": [
-        { "label": "GitHub", "href": "https://github.com/darkissdark", "target": "_blank" },
+        { "label": "Email", "href": "mailto:darkissdark@gmail.com", "target": "_self" },
+        { "label": "Telegram", "href": "https://t.me/darkiss", "target": "_blank" },
         {
             "label": "LinkedIn",
             "href": "https://www.linkedin.com/in/viktor-medvid-910160357/",
             "target": "_blank"
         },
-        { "label": "Telegram", "href": "https://t.me/darkiss", "target": "_blank" },
-        { "label": "Email", "href": "mailto:darkissdark@gmail.com", "target": "_self" }
+        { "label": "GitHub", "href": "https://github.com/darkissdark", "target": "_blank" }
     ],
-    "skills": ["Vue", "Nuxt", "React", "JS", "CSS", "SASS"],
+    "skills": ["Vue", "Nuxt", "React", "Redux", "TypeScript", "SASS", "HTML", "CSS"],
     "tools": ["Git", "Figma", "Webpack", "Vite", "Trello", "Jira"],
     "languages": [
-        { "language": "English", "level": "A2" },
-        { "language": "Ukrainian", "level": "Fluent" }
+        { "language": "English", "level": "Pre-intermediate" },
+        { "language": "Ukrainian", "level": "Native" }
     ],
     "education": [
+        {
+            "institution": "IT School GoIT",
+            "year": "2025",
+            "description": "Fullstack Developer"
+        },
         {
             "institution": "School of Programming «Shpp»",
             "year": "2025",
@@ -40,12 +45,14 @@
     "projects": [
         {
             "title": "Portfolio",
-            "description": "Personal portfolio website built with Nuxt and Tailwind CSS. Responsive, fast, and beautiful.",
+            "description": "A sophisticated, fully-responsive portfolio showcasing modern web development skills. Includes automated PDF resume generation and is deployed on GitHub Pages with CI/CD pipeline.",
             "tags": ["Vue", "Nuxt", "TypeScript", "TailwindCSS"],
             "visit": "https://darkissdark.github.io",
             "source": "https://github.com/darkissdark/darkissdark.github.io",
             "image": "/images/projects/portfolio.webp",
-            "disabled": true
+            "disabled": true,
+            "role": "developer",
+            "type": "individual"
         },
         {
             "title": "Trello-like Application",
@@ -53,15 +60,29 @@
             "tags": ["React", "Redux", "TypeScript", "SCSS"],
             "visit": "https://darkissdark.github.io/my-trello/",
             "source": "https://github.com/darkissdark/my-trello/",
-            "image": "/images/projects/trello-like.webp"
+            "image": "/images/projects/trello-like.webp",
+            "role": "developer",
+            "type": "individual"
+        },
+        {
+            "title": "Booksy - Find your next favorite read",
+            "description": "A training project for the frontend course at the IT School «GoIT», featuring semantic HTML, responsive design, retina-ready images, SVG sprites, and best practices in modern frontend development.",
+            "tags": ["JavaScript", "Vite", "HTML", "CSS"],
+            "visit": "https://darkissdark.github.io/development-hell-02/",
+            "source": "https://github.com/darkissdark/development-hell-02",
+            "image": "/images/projects/booksy.webp",
+            "role": "team lead",
+            "type": "team"
         },
         {
             "title": "DiGi - Digital Agency",
             "description": "A training project for the frontend course at the School of Programming «Shpp», featuring semantic HTML, responsive design, retina-ready images, SVG sprites, font icons, and best practices in modern frontend development.",
-            "tags": ["HTML", "CSS", "JavaScript"],
+            "tags": ["JavaScript", "HTML", "CSS"],
             "visit": "https://darkissdark.github.io/di-gi/",
             "source": "https://github.com/darkissdark/di-gi",
-            "image": "/images/projects/di-gi.webp"
+            "image": "/images/projects/di-gi.webp",
+            "role": "developer",
+            "type": "individual"
         }
     ]
 }

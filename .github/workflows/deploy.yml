@@ -35,8 +35,8 @@ jobs:
             - name: Generate PDF resume
               run: node scripts/generateResumePdf.cjs
 
-            - name: Copy viktor_medvid_cv.pdf to output
-              run: cp public/viktor_medvid_cv.pdf .output/public/viktor_medvid_cv.pdf
+            - name: Copy viktor_medvid_fullstack.pdf to output
+              run: cp public/viktor_medvid_fullstack.pdf .output/public/viktor_medvid_fullstack.pdf
 
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v4

@@ -1,4 +1,4 @@
-# Viktor Medvid – Frontend Developer Portfolio
+# Viktor Medvid – Fullstack Developer Portfolio
 
 A modern, responsive portfolio built with **Nuxt 3**, **Vue 3**, and **Tailwind CSS**. Features animated hero section, project grid, education cards, and accessibility best practices. Deployed on GitHub Pages.
 

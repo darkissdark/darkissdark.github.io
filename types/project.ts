@@ -6,4 +6,6 @@ export interface Project {
     source: string;
     image: string;
     disabled?: boolean;
+    role: string;
+    type: string;
 }

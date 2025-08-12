@@ -20,7 +20,7 @@
         </AnimatedText>
         <div class="w-full justify-center flex items-center gap-3 mt-6 z-10">
             <a
-                href="/viktor_medvid_cv.pdf"
+                href="/viktor_medvid_fullstack.pdf"
                 target="_blank"
                 class="flex items-center justify-center bg-[#488aec] text-white text-shadow font-bold text-base cursor-pointer text-center uppercase align-middle user-select-none shadow-lg border-none px-6 py-3 rounded-lg gap-2 transition duration-300 hover:bg-[#306cc6] size18"
             >
