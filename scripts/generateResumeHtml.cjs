@@ -50,7 +50,10 @@ const html = `<!DOCTYPE html>
           <li><a class="static" href="tel:+380939280755">+380 93 92 80 755</a></li>
           ${profile.contacts
               .map(
-                  (c) => `<li><a class="static" href="${c.href}" class="cv-edu-link" target="_blank">${c.label === 'Email' ? 'darkissdark@gmail.com' : c.label}</a></li>`
+                  (c) =>
+                      `<li><a class="static" href="${c.href}" class="cv-edu-link" target="_blank">${
+                          c.label === 'Email' ? 'darkissdark@gmail.com' : c.label
+                      }</a></li>`
               )
               .join('')}
           <li>${profile.location}</li>
@@ -59,37 +62,41 @@ const html = `<!DOCTYPE html>
     <section class="cv-section">
         <div class="cv-section-title">Tech Skills</div>
         <ul class="cv-list disc">
-            ${profile.skills.reduce((acc, skill, index) => {
-                if (index % 2 === 0) {
-                    if (index + 1 < profile.skills.length) {
-                        acc.push(`<li>${skill}, ${profile.skills[index + 1]}</li>`);
-                    } else {
-                        acc.push(`<li>${skill}</li>`);
+            ${profile.skills
+                .reduce((acc, skill, index) => {
+                    if (index % 2 === 0) {
+                        if (index + 1 < profile.skills.length) {
+                            acc.push(`<li>${skill}, ${profile.skills[index + 1]}</li>`);
+                        } else {
+                            acc.push(`<li>${skill}</li>`);
+                        }
                     }
-                }
-                return acc;
-            }, []).join('')}
+                    return acc;
+                }, [])
+                .join('')}
         </ul>
     </section>
     <section class="cv-section">
         <div class="cv-section-title">Tools</div>
         <ul class="cv-list disc">
-            ${profile.tools.reduce((acc, tool, index) => {
-                if (index % 2 === 0) {
-                    if (index + 1 < profile.tools.length) {
-                        acc.push(`<li>${tool}, ${profile.tools[index + 1]}</li>`);
-                    } else {
-                        acc.push(`<li>${tool}</li>`);
+            ${profile.tools
+                .reduce((acc, tool, index) => {
+                    if (index % 2 === 0) {
+                        if (index + 1 < profile.tools.length) {
+                            acc.push(`<li>${tool}, ${profile.tools[index + 1]}</li>`);
+                        } else {
+                            acc.push(`<li>${tool}</li>`);
+                        }
                     }
-                }
-                return acc;
-            }, []).join('')}
+                    return acc;
+                }, [])
+                .join('')}
         </ul>
     </section>
     <section class="cv-section">
       <div class="cv-section-title">Languages</div>
       <ul class="cv-list disc">
-        ${profile.languages.map((l) => `<li>${l.language} (${l.level})</li>`).join('')}
+        ${profile.languages.map((l) => `<li>${l.language} - ${l.level}</li>`).join('')}
       </ul>
     </section>
   </aside>
@@ -103,10 +110,20 @@ const html = `<!DOCTYPE html>
       
       ${profile.projects
           .map(
-            (p) => 
-      `<div class="cv-project">${p.visit ? `<a href="${p.visit}" target="_blank" class="cv-edu-link bold">${p.title}</a>` : ''}| <a href="${p.source}" target="_blank" class="cv-edu-link bold">Source</a> <span class="size12">(${p.tags.join(', ')})</span>
+              (p) =>
+                  `<div class="cv-project">${
+                      p.visit
+                          ? `<a href="${p.visit}" target="_blank" class="cv-edu-link bold">${p.title}</a>`
+                          : ''
+                  }| <a href="${
+                      p.source
+                  }" target="_blank" class="cv-edu-link bold">Source</a> <span class="size12">(${p.tags.join(
+                      ', '
+                  )})</span>
         <div class="cv-project-description mb-5 mt-5">${p.description}</div>
-        <div class="cv-project-role mb-5 mb-15"><span class="bold">Role:</span> ${p.role}${p.type ? `, ${p.type} project` : ''}</div>
+        <div class="cv-project-role mb-5 mb-15"><span class="bold">Role:</span> ${p.role}${
+                      p.type ? `, ${p.type} project` : ''
+                  }</div>
       </div>`
           )
           .join('')}
