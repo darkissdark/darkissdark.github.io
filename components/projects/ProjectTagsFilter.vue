@@ -27,8 +27,10 @@ function handleTagClick(tag: string): void {
 
 const baseClasses =
     'flex items-center px-3 py-1 rounded-lg text-sm font-semibold border transition';
-const activeClasses = 'bg-blue-600 text-white border-blue-600';
-const inactiveClasses = 'bg-blue-50 text-blue-600 border-blue-200 cursor-pointer hover:bg-blue-100';
+const activeClasses =
+    'bg-blue-600 text-white border-blue-600 dark:bg-blue-500 dark:text-white dark:border-blue-500';
+const inactiveClasses =
+    'bg-blue-50 text-blue-600 border-blue-200 cursor-pointer hover:bg-blue-100 dark:bg-gray-700 dark:text-blue-400 dark:border-gray-600 dark:hover:bg-gray-600';
 
 function tagButtonClass(tag: string): string {
     const isActive = tag === props.selectedTag || (!props.selectedTag && tag === 'All');

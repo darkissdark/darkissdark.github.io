@@ -5,7 +5,7 @@ export interface Project {
     visit: string;
     source: string;
     image: string;
+    role?: string;
     disabled?: boolean;
-    role: string;
-    type: string;
+    type?: string;
 }

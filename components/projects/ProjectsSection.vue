@@ -1,6 +1,6 @@
 <template>
     <section class="py-4">
-        <h2 class="text-3xl font-extrabold mb-8 text-gray-800">Projects</h2>
+        <h2 class="text-3xl font-extrabold mb-8 text-gray-800 dark:text-gray-200">Projects</h2>
         <ProjectTagsFilter
             :projectCountsByTag="projectCountsByTag"
             :selectedTag="selectedTag"

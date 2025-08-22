@@ -2,10 +2,14 @@
     <button
         @click="toggleTheme"
         aria-label="Theme switcher"
-        class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+        class="p-2 rounded-full transition"
+        :class="{
+            'hover:bg-gray-200': colorMode.value === 'light',
+            'hover:bg-gray-700': colorMode.value === 'dark',
+        }"
     >
         <MoonIcon v-if="colorMode.value === 'light'" />
-        <SunIcon v-else />
+        <SunIcon class="text-txt" v-else />
     </button>
 </template>
 

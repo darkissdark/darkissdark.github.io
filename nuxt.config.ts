@@ -16,6 +16,7 @@ export default defineNuxtConfig({
             title: 'Viktor Medvid – Fullstack Developer',
             htmlAttrs: {
                 lang: 'en',
+                class: 'bg-bg',
             },
             meta: [
                 {
