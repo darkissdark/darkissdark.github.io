@@ -44,15 +44,24 @@
     ],
     "projects": [
         {
-            "title": "Portfolio",
-            "description": "A sophisticated, fully-responsive portfolio showcasing modern web development skills. Includes automated PDF resume generation and is deployed on GitHub Pages with CI/CD pipeline.",
-            "tags": ["Vue", "Nuxt", "TS", "TailwindCSS"],
-            "visit": "https://darkissdark.github.io",
-            "source": "https://github.com/darkissdark/darkissdark.github.io",
-            "image": "/images/projects/portfolio.webp",
-            "disabled": true,
+            "title": "Car rental service",
+            "description": "A car rental platform featuring comprehensive filtering system by brand, price range, and mileage. Implements favorites functionality with localStorage persistence, and smart filters that maintain state during navigation.",
+            "tags": ["React", "Redux Toolkit", "TypeScript", "CSS Modules"],
+            "visit": "https://rental-car-beta-wine.vercel.app",
+            "source": "https://github.com/darkissdark/RentalCar",
+            "image": "/images/projects/rentalcar.webp",
             "role": "developer",
             "type": "individual"
+        },
+        {
+            "title": "Pregnancy Tracker",
+            "description": "Featuring daily tasks, health diary, baby development tracking, AI assistant, and personalized recommendations. Includes authentication, profile management, and week-by-week pregnancy information.",
+            "tags": ["Next.js", "React", "TypeScript", "CSS"],
+            "visit": "https://birdie-kohl.vercel.app",
+            "source": "https://github.com/darkissdark/birdie",
+            "image": "/images/projects/birdie.webp",
+            "role": "Team Lead, developer",
+            "type": "team"
         },
         {
             "title": "Trello-like Application",
@@ -64,13 +73,25 @@
             "role": "developer"
         },
         {
+            "title": "Portfolio",
+            "description": "A sophisticated, fully-responsive portfolio showcasing modern web development skills. Includes automated PDF resume generation and is deployed on GitHub Pages with CI/CD pipeline.",
+            "tags": ["Vue", "Nuxt", "TS", "TailwindCSS"],
+            "visit": "https://darkissdark.github.io",
+            "source": "https://github.com/darkissdark/darkissdark.github.io",
+            "image": "/images/projects/portfolio.webp",
+            "disabled": true,
+            "role": "developer",
+            "type": "individual"
+        },
+        {
             "title": "Book Finder",
-            "description": "A training project for the frontend course at the IT School «GoIT», featuring semantic HTML, responsive design, retina-ready images, SVG sprites, and best practices in modern frontend development.",
+            "description": "A training team project for the frontend course at the IT School «GoIT», featuring semantic HTML, responsive design, retina-ready images, SVG sprites, and best practices in modern frontend development.",
             "tags": ["JavaScript", "Vite", "HTML", "CSS"],
             "visit": "https://darkissdark.github.io/development-hell-02/",
             "source": "https://github.com/darkissdark/development-hell-02",
             "image": "/images/projects/booksy.webp",
-            "role": "Team Lead, developer"
+            "role": "Team Lead, developer",
+            "type": "team"
         },
         {
             "title": "Digital Agency",
@@ -79,7 +100,8 @@
             "visit": "https://darkissdark.github.io/di-gi/",
             "source": "https://github.com/darkissdark/di-gi",
             "image": "/images/projects/di-gi.webp",
-            "role": "developer"
+            "role": "developer",
+            "type": "individual"
         }
     ]
 }

@@ -10,9 +10,18 @@
             loading="lazy"
         />
 
-        <h3 class="font-bold text-xl md:text-2xl text-gray-900 dark:text-gray-100">
-            {{ project.title }}
-        </h3>
+        <div class="flex items-center gap-3">
+            <h3 class="font-bold text-xl md:text-2xl text-gray-900 dark:text-gray-100">
+                {{ project.title }}
+            </h3>
+            <span
+                v-if="project.type === 'team'"
+                title="Team project"
+                class="bg-green-100 text-green-700 font-semibold px-3 py-1 rounded-lg text-xs uppercase dark:bg-green-900 dark:text-green-300"
+            >
+                team
+            </span>
+        </div>
 
         <p class="text-gray-600 text-base md:text-lg dark:text-gray-300">
             {{ project.description }}
