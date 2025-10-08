@@ -109,17 +109,18 @@ const html = `<!DOCTYPE html>
       <div class="cv-section-title">Project experience</div>
       
       ${profile.projects
+          .filter((p) => !p.cvDisabled)
           .map(
               (p) =>
                   `<div class="cv-project">${
                       p.visit
                           ? `<a href="${p.visit}" target="_blank" class="cv-edu-link bold">${p.title}</a>`
                           : ''
-                  }| <a href="${
+                  }| ${
                       p.source
-                  }" target="_blank" class="cv-edu-link bold">Source</a> <span class="size12">(${p.tags.join(
-                      ', '
-                  )})</span>
+                          ? `<a href="${p.source}" target="_blank" class="cv-edu-link bold">Source</a>`
+                          : ''
+                  } <span class="size12">(${p.tags.join(', ')})</span>
         <div class="cv-project-description mb-5 mt-5">${p.description}</div>
         <div class="cv-project-role mb-5 mb-15"><span class="bold">Role:</span> ${p.role}${
                       p.type ? `, ${p.type} project` : ''

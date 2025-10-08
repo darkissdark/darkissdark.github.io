@@ -17,9 +17,9 @@ import profile from '../../data/profile.json';
 import { ref, computed } from 'vue';
 import type { Project } from '../../types/project';
 
-const projects = profile.projects;
+const projects = profile.projects.filter((p: Project) => !p.viewDisabled);
 
-const tagsToView = ['Vue', 'React', 'HTML', 'All'];
+const tagsToView = ['Vue', 'React', 'All'];
 type Tag = (typeof tagsToView)[number];
 
 const selectedTag = ref<Tag | null>(null);

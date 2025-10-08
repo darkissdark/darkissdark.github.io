@@ -39,7 +39,6 @@
 
         <div class="flex gap-3 mt-auto">
             <a
-                v-if="!project.disabled"
                 :href="project.visit"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -49,6 +48,7 @@
                 <VisitIcon width="24" height="24" /> VISIT
             </a>
             <a
+                v-if="project.source"
                 :href="project.source"
                 target="_blank"
                 rel="noopener noreferrer"

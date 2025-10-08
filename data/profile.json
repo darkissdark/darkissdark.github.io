@@ -70,7 +70,8 @@
             "visit": "https://darkissdark.github.io/my-trello/",
             "source": "https://github.com/darkissdark/my-trello/",
             "image": "/images/projects/trello-like.webp",
-            "role": "developer"
+            "role": "developer",
+            "type": "individual"
         },
         {
             "title": "Portfolio",
@@ -79,7 +80,7 @@
             "visit": "https://darkissdark.github.io",
             "source": "https://github.com/darkissdark/darkissdark.github.io",
             "image": "/images/projects/portfolio.webp",
-            "disabled": true,
+            "viewDisabled": true,
             "role": "developer",
             "type": "individual"
         },
@@ -91,7 +92,9 @@
             "source": "https://github.com/darkissdark/development-hell-02",
             "image": "/images/projects/booksy.webp",
             "role": "Team Lead, developer",
-            "type": "team"
+            "type": "team",
+            "viewDisabled": true,
+            "cvDisabled": true
         },
         {
             "title": "Digital Agency",
@@ -101,7 +104,18 @@
             "source": "https://github.com/darkissdark/di-gi",
             "image": "/images/projects/di-gi.webp",
             "role": "developer",
-            "type": "individual"
+            "type": "individual",
+            "viewDisabled": true,
+            "cvDisabled": true
+        },
+        {
+            "title": "DIM.RIA.com",
+            "description": "Development and maintenance of functionality for the DOM.RIA website - a leading real estate portal in Ukraine. Utilized Vue.js and Webpack to create interactive components and ensure high website performance.",
+            "tags": ["Vue", "Webpack", "JavaScript", "HTML", "SASS"],
+            "visit": "https://dom.ria.com/uk/",
+            "image": "/images/projects/dimRia.webp",
+            "role": "developer",
+            "type": "team"
         }
     ]
 }
