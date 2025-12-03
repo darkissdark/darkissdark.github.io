@@ -5,6 +5,7 @@
         <Hero />
         <Contacts />
         <ProjectsSection />
+        <WorkExperienceSection />
         <EducationSection />
     </main>
 </template>
@@ -13,6 +14,7 @@
 import Hero from '../components/hero/Hero.vue';
 import Contacts from '../components/contacts/Contacts.vue';
 import ProjectsSection from '../components/projects/ProjectsSection.vue';
+import WorkExperienceSection from '../components/experience/WorkExperienceSection.vue';
 import EducationSection from '../components/education/EducationSection.vue';
 </script>
 

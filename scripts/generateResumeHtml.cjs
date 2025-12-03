@@ -28,6 +28,18 @@ a.static { position: static; left: 0; }
 .flex{ display: flex; gap: 2rem; }
 .bold { font-weight: 600; }
 .size12 { font-size: 12px; }
+.cv-exp-item { margin-bottom: 20px; }
+.cv-exp-header { margin-bottom: 8px; }
+.cv-exp-position { font-weight: 600; font-size: 1.05rem; }
+.cv-exp-company { font-weight: 600; color: #555; }
+.cv-exp-period { font-size: 0.95rem; color: #666; margin-left: 0.5rem; }
+.cv-exp-tech { margin-top: 8px; }
+.cv-exp-tech-title { font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
+.cv-exp-tech-list { font-size: 0.9rem; color: #555; }
+.cv-exp-resp { margin-top: 8px; }
+.cv-exp-resp-title { font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
+.cv-exp-resp-list { list-style: disc; padding-left: 20px; margin-top: 4px; }
+.cv-exp-resp-list li { margin-bottom: 3px; font-size: 0.9rem; color: #555; }
 `;
 
 const html = `<!DOCTYPE html>
@@ -125,6 +137,55 @@ const html = `<!DOCTYPE html>
         <div class="cv-project-role mb-5 mb-15"><span class="bold">Role:</span> ${p.role}${
                       p.type ? `, ${p.type} project` : ''
                   }</div>
+      </div>`
+          )
+          .join('')}
+    </section>
+    <section class="cv-section">
+      <div class="cv-section-title">Work Experience</div>
+      ${profile.experience
+          .map(
+              (exp) =>
+                  `<div class="cv-exp-item">
+        <div class="cv-exp-header">
+          <span class="cv-exp-position">${exp.position}</span>
+          <span class="cv-exp-period">${exp.period}</span>
+        </div>
+        <div class="cv-exp-company">${exp.company}</div>
+        ${
+            exp.technologies && exp.technologies.length > 0
+                ? `<div class="cv-exp-tech">
+            <div class="cv-exp-tech-title">Technologies:</div>
+            <div class="cv-exp-tech-list">${exp.technologies.join(', ')}</div>
+          </div>`
+                : ''
+        }
+        ${
+            exp.methodologies && exp.methodologies.length > 0
+                ? `<div class="cv-exp-tech">
+            <div class="cv-exp-tech-title">Methodologies:</div>
+            <div class="cv-exp-tech-list">${exp.methodologies.join(', ')}</div>
+          </div>`
+                : ''
+        }
+        ${
+            exp.tools && exp.tools.length > 0
+                ? `<div class="cv-exp-tech">
+            <div class="cv-exp-tech-title">Tools:</div>
+            <div class="cv-exp-tech-list">${exp.tools.join(', ')}</div>
+          </div>`
+                : ''
+        }
+        ${
+            exp.responsibilities && exp.responsibilities.length > 0
+                ? `<div class="cv-exp-resp">
+            <div class="cv-exp-resp-title">Responsibilities:</div>
+            <ul class="cv-exp-resp-list">
+              ${exp.responsibilities.map((r) => `<li>${r}</li>`).join('')}
+            </ul>
+          </div>`
+                : ''
+        }
       </div>`
           )
           .join('')}

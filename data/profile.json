@@ -42,6 +42,53 @@
             "description": "Specialization in Informatics and Computer Technology"
         }
     ],
+    "experience": [
+        {
+            "position": "Senior HTML/CSS Markup Developer",
+            "company": "RIA.com",
+            "period": "2014 - 2024",
+            "technologies": [
+                "Compass",
+                "Gulp",
+                "CSS (SASS/SCSS)",
+                "HTML",
+                "Koa 2 + FlightJs",
+                "JavaScript",
+                "Webpack 4",
+                "Vue 2",
+                "Vuex",
+                "VueRouter",
+                "vue-i18n",
+                "Figma",
+                "React + Styled Components",
+                "webView",
+                "Git"
+            ],
+            "methodologies": ["Agile (Scrum)", "Waterfall"],
+            "tools": ["Trello", "Jira"],
+            "responsibilities": [
+                "Create efficient, fast and adaptive interface layouts",
+                "Boost web application performance and loading speed",
+                "Present new ideas and solutions to optimize applications",
+                "Ensure cross-browser compatibility and responsive design",
+                "Adjust layouts according to UI/UX design guidelines",
+                "HTML email template",
+                "Maintain code quality and consistency across projects"
+            ]
+        },
+        {
+            "position": "Web Developer",
+            "company": "Glyanec.net",
+            "period": "2013 - 2014",
+            "technologies": ["CSS", "HTML", "CMS Drupal", "JavaScript", "jQuery"]
+        },
+        {
+            "position": "Freelance Web Developer",
+            "company": "Freelance",
+            "period": "2011 - 2013",
+            "technologies": ["CSS", "HTML", "CMS Drupal", "jQuery"]
+        }
+    ],
     "projects": [
         {
             "title": "Car rental service",
