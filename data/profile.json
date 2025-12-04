@@ -23,7 +23,8 @@
         {
             "institution": "IT School GoIT",
             "year": "2025",
-            "description": "Fullstack Developer"
+            "link": "/certificates/ViktorMedvid.pdf",
+            "linkText": "Fullstack Developer"
         },
         {
             "institution": "School of Programming «Shpp»",
