@@ -19,7 +19,7 @@ import type { Project } from '../../types/project';
 
 const projects = profile.projects.filter((p: Project) => !p.viewDisabled);
 
-const tagsToView = ['Vue', 'React', 'All'];
+const tagsToView = ['Vue', 'React', 'HTML', 'All'];
 type Tag = (typeof tagsToView)[number];
 
 const selectedTag = ref<Tag | null>(null);

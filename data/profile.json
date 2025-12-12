@@ -16,7 +16,7 @@
     "skills": ["Vue", "Nuxt", "React", "Redux", "TS", "REST API", "SASS / CSS", "HTML"],
     "tools": ["Git", "Figma", "Webpack", "Vite", "Trello", "Jira"],
     "languages": [
-        { "language": "English", "level": "Pre-intermediate" },
+        { "language": "English", "level": "Intermediate" },
         { "language": "Ukrainian", "level": "Native" }
     ],
     "education": [
@@ -153,7 +153,6 @@
             "image": "/images/projects/di-gi.webp",
             "role": "developer",
             "type": "individual",
-            "viewDisabled": true,
             "cvDisabled": true
         },
         {
