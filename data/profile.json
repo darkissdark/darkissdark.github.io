@@ -1,6 +1,6 @@
 {
     "name": "Viktor Medvid",
-    "role": "Fullstack Developer",
+    "role": "Frontend Developer",
     "avatar": "/images/me.webp",
     "location": "Split, Croatia",
     "contacts": [
@@ -13,7 +13,7 @@
         },
         { "label": "GitHub", "href": "https://github.com/darkissdark", "target": "_blank" }
     ],
-    "skills": ["Vue", "Nuxt", "React", "Redux", "TS", "REST API", "SASS / CSS", "HTML"],
+    "skills": ["Vue", "Nuxt", "React", "Next", "TS", "REST", "SASS / CSS", "HTML"],
     "tools": ["Git", "Figma", "Webpack", "Vite", "Trello", "Jira"],
     "languages": [
         { "language": "English", "level": "Intermediate" },
@@ -45,28 +45,41 @@
     ],
     "experience": [
         {
+            "position": "Frontend Developer",
+            "company": "WWG.it",
+            "period": "2025 - present",
+            "technologies": ["React", "Next.js", "Material UI", "AWS"],
+            "methodologies": ["Agile"],
+            "tools": ["Jira", "Git", "Figma"],
+            "responsibilities": [
+                "Create efficient, fast and adaptive interface layouts for the website and admin panel",
+                "Boost web application performance and loading speed",
+                "Maintain code quality and consistency across projects",
+                "Support and maintenance of various company projects"
+            ]
+        },
+        {
             "position": "Senior HTML/CSS Markup Developer",
             "company": "RIA.com",
             "period": "2014 - 2024",
             "technologies": [
-                "Compass",
-                "Gulp",
-                "CSS (SASS/SCSS)",
-                "HTML",
-                "Koa 2 + FlightJs",
                 "JavaScript",
-                "Webpack 4",
-                "Vue 2",
+                "Webpack",
+                "Vue",
                 "Vuex",
                 "VueRouter",
                 "vue-i18n",
-                "Figma",
-                "React + Styled Components",
+                "React",
+                "Styled Components",
                 "webView",
-                "Git"
+                "FlightJs",
+                "Compass",
+                "Gulp",
+                "CSS (SASS/SCSS)",
+                "HTML"
             ],
-            "methodologies": ["Agile (Scrum)", "Waterfall"],
-            "tools": ["Trello", "Jira"],
+            "methodologies": ["Agile", "Waterfall"],
+            "tools": ["Trello", "Jira", "Git", "Figma"],
             "responsibilities": [
                 "Create efficient, fast and adaptive interface layouts",
                 "Boost web application performance and loading speed",

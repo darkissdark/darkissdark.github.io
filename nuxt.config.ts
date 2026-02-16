@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     app: {
         baseURL: '/',
         head: {
-            title: 'Viktor Medvid – Fullstack Developer',
+            title: 'Viktor Medvid – Frontend Developer',
             htmlAttrs: {
                 lang: 'en',
                 class: 'bg-bg',
@@ -21,12 +21,12 @@ export default defineNuxtConfig({
             meta: [
                 {
                     name: 'description',
-                    content: 'Fullstack resume of Viktor Medvid with experience in web development',
+                    content: 'Frontend resume of Viktor Medvid with experience in web development',
                 },
-                { property: 'og:title', content: 'Viktor Medvid – Fullstack Developer' },
+                { property: 'og:title', content: 'Viktor Medvid – Frontend Developer' },
                 {
                     property: 'og:description',
-                    content: 'Fullstack resume of Viktor Medvid with experience in web development',
+                    content: 'Frontend resume of Viktor Medvid with experience in web development',
                 },
                 { property: 'og:image', content: 'https://darkissdark.github.io/share.webp' },
                 { property: 'og:url', content: 'https://darkissdark.github.io/' },

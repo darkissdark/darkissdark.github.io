@@ -53,7 +53,7 @@ const html = `<!DOCTYPE html>
 <body>
   <header class="cv-header">
     <div class="cv-title">${profile.name}</div>
-    <div class="cv-role">Fullstack Developer</div>
+    <div class="cv-role">Frontend Developer</div>
   </header>
   <aside class="cv-aside">
     <section class="cv-section">
@@ -115,7 +115,7 @@ const html = `<!DOCTYPE html>
   <main class="cv-main">
     <section class="cv-section">
       <div class="cv-section-title">Summary</div>
-      Fullstack developer with strong front-end expertise and growing back-end skills. Responsible, adaptable, and a great team fit, with proven strengths in time management and task prioritization.
+      Frontend developer with strong front-end expertise and growing back-end skills. Responsible, adaptable, and a great team fit, with proven strengths in time management and task prioritization.
     </section>
     <section class="cv-section">
       <div class="cv-section-title">Project experience</div>
@@ -211,6 +211,6 @@ const html = `<!DOCTYPE html>
 </body>
 </html>`;
 
-const outPath = path.resolve(__dirname, '../public/Viktor_Medvid_Fullstack_Developer.html');
+const outPath = path.resolve(__dirname, '../public/Viktor_Medvid_Frontend_Developer.html');
 fs.writeFileSync(outPath, html, 'utf-8');
-console.log('Viktor_Medvid_Fullstack_Developer.html generated at:', outPath);
+console.log('Viktor_Medvid_Frontend_Developer.html generated at:', outPath);
