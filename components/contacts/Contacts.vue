@@ -1,5 +1,9 @@
 <template>
-    <section class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
+    <div
+        class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50"
+        role="navigation"
+        aria-label="Contacts"
+    >
         <div
             class="flex flex-col items-center bg-bg rounded-xl shadow-lg border border-blue-200 px-3 py-2 gap-2"
         >
@@ -9,7 +13,7 @@
                     :key="contact.label"
                     :href="contact.href"
                     :target="contact.target"
-                    ref="noopener noreferrer"
+                    rel="noopener noreferrer"
                     :aria-label="contact.label"
                     class="hover:text-[#306cc6] dark:hover:text-[#488aec] text-txt hover:scale-120 transition-colors transition-transform"
                 >
@@ -17,7 +21,7 @@
                 </a>
             </div>
         </div>
-    </section>
+    </div>
 </template>
 
 <script lang="ts" setup>

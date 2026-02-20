@@ -135,8 +135,8 @@ const html = `<!DOCTYPE html>
                   } <span class="size12">(${p.tags.join(', ')})</span>
         <div class="cv-project-description mb-5 mt-5">${p.description}</div>
         <div class="cv-project-role mb-5 mb-15"><span class="bold">Role:</span> ${p.role}${
-                      p.type ? `, ${p.type} project` : ''
-                  }</div>
+            p.type ? `, ${p.type} project` : ''
+        }</div>
       </div>`
           )
           .join('')}

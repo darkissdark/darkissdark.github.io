@@ -25,13 +25,16 @@ type Tag = (typeof tagsToView)[number];
 const selectedTag = ref<Tag | null>(null);
 
 const projectCountsByTag = computed<Record<Tag, number>>(() => {
-    return tagsToView.reduce((acc, tag) => {
-        acc[tag] =
-            tag === 'All'
-                ? projects.length
-                : projects.filter((p: Project) => p.tags.includes(tag)).length;
-        return acc;
-    }, {} as Record<Tag, number>);
+    return tagsToView.reduce(
+        (acc, tag) => {
+            acc[tag] =
+                tag === 'All'
+                    ? projects.length
+                    : projects.filter((p: Project) => p.tags.includes(tag)).length;
+            return acc;
+        },
+        {} as Record<Tag, number>
+    );
 });
 
 const filteredProjects = computed<Project[]>(() => {

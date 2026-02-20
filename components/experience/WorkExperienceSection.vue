@@ -25,7 +25,10 @@
                         {{ item.company }}
                     </div>
 
-                    <div v-if="item.description" class="text-gray-600 text-base dark:text-gray-400 mt-2">
+                    <div
+                        v-if="item.description"
+                        class="text-gray-600 text-base dark:text-gray-400 mt-2"
+                    >
                         {{ item.description }}
                     </div>
 
@@ -78,7 +81,9 @@
                         <div class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                             Responsibilities:
                         </div>
-                        <ul class="list-disc list-inside space-y-1 text-gray-600 text-sm dark:text-gray-400">
+                        <ul
+                            class="list-disc list-inside space-y-1 text-gray-600 text-sm dark:text-gray-400"
+                        >
                             <li v-for="(resp, respIndex) in item.responsibilities" :key="respIndex">
                                 {{ resp }}
                             </li>
@@ -97,4 +102,3 @@ import type { Experience } from '../../types/experience';
 
 const experienceData = profile.experience as Experience[];
 </script>
-

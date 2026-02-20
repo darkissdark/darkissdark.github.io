@@ -8,4 +8,3 @@ export interface Experience {
     tools?: string[];
     responsibilities?: string[];
 }
-

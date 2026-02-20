@@ -94,7 +94,11 @@ onMounted(() => {
 <style>
 .text-stroke {
     letter-spacing: 1px;
-    text-shadow: -1px -1px 0 #3b82f6, 1px -1px 0 #3b82f6, -1px 1px 0 #3b82f6, 1px 1px 0 #3b82f6;
+    text-shadow:
+        -1px -1px 0 #3b82f6,
+        1px -1px 0 #3b82f6,
+        -1px 1px 0 #3b82f6,
+        1px 1px 0 #3b82f6;
 }
 /* .shine {
     position: absolute;
