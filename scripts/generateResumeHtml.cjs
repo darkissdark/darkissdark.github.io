@@ -115,7 +115,7 @@ const html = `<!DOCTYPE html>
   <main class="cv-main">
     <section class="cv-section">
       <div class="cv-section-title">Summary</div>
-      Frontend developer with strong front-end expertise and growing back-end skills. Responsible, adaptable, and a great team fit, with proven strengths in time management and task prioritization.
+      Frontend developer with solid experience in markup and modern JS frameworks. Experience with Vue and React, adaptive and cross-browser layout, and performance optimization. Used to Agile workflows, clean code standards, and collaborating with design and QA.
     </section>
     <section class="cv-section">
       <div class="cv-section-title">Project experience</div>
