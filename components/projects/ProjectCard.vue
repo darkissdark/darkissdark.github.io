@@ -2,12 +2,13 @@
     <article
         class="bg-bg rounded-3xl shadow-lg border border-gray-200 p-6 flex flex-col gap-4 hover:shadow-2xl transition-shadow duration-300 dark:bg-gray-800 dark:border-gray-700"
     >
-        <img
+        <NuxtImg
             v-if="project.image"
             :src="project.image"
             :alt="`Preview image for ${project.title}`"
             class="rounded-xl w-full object-cover mb-2 max-h-90 md:max-h-60 lg:max-h-80"
             loading="lazy"
+            sizes="sm:100vw md:50vw lg:33vw"
         />
 
         <div class="flex items-center gap-3">

@@ -12,7 +12,7 @@
             </clipPath>
         </defs>
         <image
-            xlink:href="/public/images/me.webp"
+            :href="avatarSrc"
             width="160"
             height="185"
             x="20"
@@ -22,3 +22,8 @@
         />
     </svg>
 </template>
+
+<script setup lang="ts">
+const img = useImage();
+const avatarSrc = img('/images/me.webp', { width: 160, height: 185 });
+</script>

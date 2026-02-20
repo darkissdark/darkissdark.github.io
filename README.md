@@ -56,7 +56,7 @@ yarn generate
 
 - Static site is generated with `yarn generate` and deployed via GitHub Actions (`.github/workflows/deploy.yml`).
 - All images must be optimized and placed in `public/images/projects/` (webp/png/jpg).
-- **Nuxt Image/IPX is NOT used** for production – use `<img>` with ready images for full compatibility.
+- **@nuxt/image** is used for all images – with `ipxStatic` provider for static generation (GitHub Pages).
 
 ---
 

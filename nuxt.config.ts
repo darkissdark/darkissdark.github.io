@@ -1,15 +1,22 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    ssr: false,
+    ssr: true,
     compatibilityDate: '2025-05-15',
     devtools: { enabled: true },
-    modules: ['@nuxtjs/tailwindcss', '@nuxtjs/critters', '@nuxtjs/color-mode'],
+    modules: ['@nuxt/image', '@nuxtjs/tailwindcss', '@nuxtjs/critters', '@nuxtjs/color-mode'],
     colorMode: {
         classSuffix: '',
         preference: 'system',
         fallback: 'light',
     },
     critters: {},
+    hooks: {
+        'build:manifest': (manifest) => {
+            Object.values(manifest).forEach((file) => {
+                file.prefetch = false;
+            });
+        },
+    },
     app: {
         baseURL: '/',
         head: {
